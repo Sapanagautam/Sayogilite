@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SayogiLite - Construction Excellence</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css"
+    />
+    <style>
+      :root {
+        --bs-primary: #1AB189;
+        --bs-primary-rgb: 26, 177, 137;
+        --bs-secondary: #555555;
+        --bs-secondary-rgb: 85, 85, 85;
+        --bs-dark: #000000;
+        --bs-dark-rgb: 0, 0, 0;
+        --bs-warning: #FF980E;
+        --bs-warning-rgb: 255, 152, 14;
+        --bs-info: #186B97;
+        --bs-info-rgb: 24, 107, 151;
+        --primary-dark: #128B6B;
+        --primary-light: #ADEBDB;
+        --bg-light-cyan: #D5F2F0;
+        --text-dark: #222222;
+      }
+
+      .bg-light-cyan {
+        background-color: var(--bg-light-cyan);
+      }
+
+      .text-dark-custom {
+        color: var(--text-dark);
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .navbar {
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+
+      .brand-logo-img {
+        width: 92px;
+        height: 76px;
+      }
+
+      .nav-link {
+        font-family: 'Poppins', sans-serif;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--bs-primary) !important;
+      }
+
+      .nav-link.active {
+        color: var(--bs-dark) !important;
+      }
+
+      .active-nav {
+        font-weight: 600 !important;
+      }
+
+      .btn-get-started {
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
+        width: 141px;
+        height: 40px;
+        padding: 8px 20px 8px 12px;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: -0.09px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        gap: 8px;
+      }
+
+      .btn-get-started:hover {
+        background-color: #9ea1a0;
+        border-color: #9aaaa7;
+        color: white;
+        transform: translateY(-1px);
+      }
+
+      .btn-get-started i {
+        margin-left: 6px;
+        font-size: 0.9rem;
+      }
+
+      .navbar-toggler {
+        padding: 6px 8px;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      .bg-info-subtle {
+        background-color: rgba(var(--bs-info-rgb), 0.15) !important;
+      }
+
+      .bg-warning-subtle {
+        background-color: rgba(var(--bs-warning-rgb), 0.2) !important;
+      }
+
+      .bg-primary-subtle {
+        background-color: rgba(var(--bs-primary-rgb), 0.5) !important;
+      }
+
+      .circle-indicator {
+        width: 24px;
+        height: 24px;
+        background-color: var(--bs-primary);
+      }
+
+      .circle-indicator-inner {
+        width: 10px;
+        height: 10px;
+        background-color: white;
+      }
+
+      .stat-value {
+        color: var(--bs-primary);
+        font-size: 18px;
+      }
+
+      .avatar-circle-dark {
+        width: 35px;
+        height: 35px;
+        background-color: var(--primary-dark);
+      }
+
+      .avatar-circle-primary {
+        width: 35px;
+        height: 35px;
+        background-color: var(--bs-primary);
+        margin-left: -12px;
+      }
+
+      .avatar-circle-light {
+        width: 35px;
+        height: 35px;
+        background-color: var(--primary-light);
+        margin-left: -12px;
+      }
+
+      .avatar-circle-light span {
+        color: var(--primary-dark);
+        font-size: 18px;
+      }
+
+      .feature-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+      }
+
+      @media (max-width: 991.98px) {
+        .navbar-collapse {
+          margin-top: 15px;
+        }
+        
+        .btn-get-started {
+          margin-top: 15px;
+          width: fit-content;
+          height: auto;
+        }
+      }
+
+      .card {
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .social-icon {
+        width: 36px;
+        height: 36px;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .social-icon:hover {
+        background-color: #ffffff;
+        color: var(--bs-info);
+        border-color: #ffffff;
+      }
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+    </style>
+  </head>
+  <body class="bg-light m-0 p-0">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-2">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="images/project sayogi 1.jpg"
+            alt="sayogilite"
+            class="brand-logo-img"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto gap-4">
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="features.html">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          
+          <a href="#" class="btn btn-get-started text-white text-decoration-none d-inline-flex align-items-center">
+            Get Started <i class="bi bi-chevron-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Everything You Need Section -->
+    <section class="py-5 bg-white">
+        <div class="container" style="padding-top: 86px; padding-bottom: 86px; ">
+            <!-- Header -->
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-semibold mb-3">Everything You Need</h2>
+                <p class="text-muted fs-6 mx-auto" style="max-width: 643px;">
+                    Discover the comprehensive features that make Sayogi the ultimate construction management platform.
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="row g-4 mb-4">
+                
+                <!-- Site Creation -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 border rounded-3 shadow-sm feature-card">
+                        <img src="images/Site 1.jpg" 
+                             alt="Site Creation" 
+                             class="card-img-top rounded-top-3">
+                        <div class="card-body p-3 text-center">
+                            <h5 class="card-title fw-semibold fs-6 mb-2">Site Creation</h5>
+                            <p class="card-text text-muted small mb-0">
+                                Create and setup new construction sites with detailed project information and specifications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial Management -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 border rounded-3 shadow-sm feature-card">
+                        <img src="images/3 1.jpg" 
+                             alt="Financial Management" 
+                             class="card-img-top rounded-top-3">
+                        <div class="card-body p-3 text-center">
+                            <h5 class="card-title fw-semibold fs-6 mb-2">Financial Management</h5>
+                            <p class="card-text text-muted small mb-0">
+                                Create and setup new construction sites with detailed project information and specifications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rate Setting -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 border rounded-3 shadow-sm feature-card">
+                        <img src="images/4 3.jpg" 
+                             alt="Rate Setting" 
+                             class="card-img-top rounded-top-3">
+                        <div class="card-body p-3 text-center">
+                            <h5 class="card-title fw-semibold fs-6 mb-2">Rate Setting</h5>
+                            <p class="card-text text-muted small mb-0">
+                                Create a Site and can add Rate of each product and Services.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Party Management -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 border rounded-3 shadow-sm feature-card">
+                        <img src="images/5 2.jpg" 
+                             alt="Party Management" 
+                             class="card-img-top rounded-top-3">
+                        <div class="card-body p-3 text-center">
+                            <h5 class="card-title fw-semibold fs-6 mb-2">Party Management</h5>
+                            <p class="card-text text-muted small mb-0">
+                                Manage contractors, suppliers, clients, and other stakeholders in one centralized system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View More Button -->
+            <div class="text-center">
+                <a href="#" class="btn btn-lg px-3 py-2 text-white fw-normal rounded-3" 
+                   style="background-color: var(--bs-primary);">
+                    View More
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    </body>
+    </html>
