@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SayogiLite - Construction Excellence</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css"
+    />
+    <style>
+      :root {
+        --bs-primary: #1AB189;
+        --bs-primary-rgb: 26, 177, 137;
+        --bs-secondary: #555555;
+        --bs-secondary-rgb: 85, 85, 85;
+        --bs-dark: #000000;
+        --bs-dark-rgb: 0, 0, 0;
+        --bs-warning: #FF980E;
+        --bs-warning-rgb: 255, 152, 14;
+        --bs-info: #186B97;
+        --bs-info-rgb: 24, 107, 151;
+        --primary-dark: #128B6B;
+        --primary-light: #ADEBDB;
+        --bg-light-cyan: #D5F2F0;
+        --text-dark: #222222;
+      }
+
+      .bg-light-cyan {
+        background-color: var(--bg-light-cyan);
+      }
+
+      .text-dark-custom {
+        color: var(--text-dark);
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .navbar {
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+
+      .brand-logo-img {
+        width: 92px;
+        height: 76px;
+      }
+
+      .nav-link {
+        font-family: 'Poppins', sans-serif;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--bs-primary) !important;
+      }
+
+      .nav-link.active {
+        color: var(--bs-dark) !important;
+      }
+
+      .active-nav {
+        font-weight: 600 !important;
+      }
+
+      .btn-get-started {
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
+        width: 141px;
+        height: 40px;
+        padding: 8px 20px 8px 12px;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: -0.09px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        gap: 8px;
+      }
+
+      .btn-get-started:hover {
+        background-color: #9ea1a0;
+        border-color: #9aaaa7;
+        color: white;
+        transform: translateY(-1px);
+      }
+
+      .btn-get-started i {
+        margin-left: 6px;
+        font-size: 0.9rem;
+      }
+
+      .navbar-toggler {
+        padding: 6px 8px;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      .bg-info-subtle {
+        background-color: rgba(var(--bs-info-rgb), 0.15) !important;
+      }
+
+      .bg-warning-subtle {
+        background-color: rgba(var(--bs-warning-rgb), 0.2) !important;
+      }
+
+      .bg-primary-subtle {
+        background-color: rgba(var(--bs-primary-rgb), 0.5) !important;
+      }
+
+      .circle-indicator {
+        width: 24px;
+        height: 24px;
+        background-color: var(--bs-primary);
+      }
+
+      .circle-indicator-inner {
+        width: 10px;
+        height: 10px;
+        background-color: white;
+      }
+
+      .stat-value {
+        color: var(--bs-primary);
+        font-size: 18px;
+      }
+
+      .avatar-circle-dark {
+        width: 35px;
+        height: 35px;
+        background-color: var(--primary-dark);
+      }
+
+      .avatar-circle-primary {
+        width: 35px;
+        height: 35px;
+        background-color: var(--bs-primary);
+        margin-left: -12px;
+      }
+
+      .avatar-circle-light {
+        width: 35px;
+        height: 35px;
+        background-color: var(--primary-light);
+        margin-left: -12px;
+      }
+
+      .avatar-circle-light span {
+        color: var(--primary-dark);
+        font-size: 18px;
+      }
+
+      .feature-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+      }
+
+      @media (max-width: 991.98px) {
+        .navbar-collapse {
+          margin-top: 15px;
+        }
+        
+        .btn-get-started {
+          margin-top: 15px;
+          width: fit-content;
+          height: auto;
+        }
+      }
+
+      .card {
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .social-icon {
+        width: 36px;
+        height: 36px;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .social-icon:hover {
+        background-color: #ffffff;
+        color: var(--bs-info);
+        border-color: #ffffff;
+      }
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.pricing-card-pro {
+      background: var(--bs-info) !important;
+      color: white !important;
+    }
+
+    .pricing-card-pro .text-muted {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    .badge-popular {
+      background-color: #16a085;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .pricing-features li {
+      font-size: 0.9rem;
+    }
+
+    .feature-disabled {
+      color: #d1d5db;
+    }
+  </style>
+
+    </style>
+  </head>
+  <body class="bg-light m-0 p-0">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-2">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="images/project sayogi 1.jpg"
+            alt="sayogilite"
+            class="brand-logo-img"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto gap-4">
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="features.html">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          
+          <a href="#" class="btn btn-get-started text-white text-decoration-none d-inline-flex align-items-center">
+            Get Started <i class="bi bi-chevron-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+    
+
+<body class="bg-light">
+
+  <!-- Pricing Section -->
+  <div class="container-fluid py-5 bg-white">
+    <div class="container text-center" style="padding-top: 86px; padding-bottom: 86px;">
+      <h2 class="fw-bold mb-3" style="font-size: 2.5rem;">
+        Flexible <span class="text-primary">Pricing</span> Options
+      </h2>
+      <p class="text-muted mb-5 mx-auto" style="max-width: 700px;">
+        Our pricing adapts to your needs, whether you're just starting out or scaling up.
+        Choose from flexible plans designed to support every stage of your online learning journey.
+      </p>
+
+      <div class="row g-4 justify-content-center border bg-white rounded-4 p-3 p-md-4">
+        <!-- Basic -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 border-0 position-relative">
+            <div class="card-body d-flex flex-column p-4 border-end">
+              <h4 class="fw-bold mb-2 text-start">Basic</h4>
+              <p class="text-start mb-4 small text-muted">Ideal for small learners and educators starting out.</p>
+
+              <div class="mb-4 text-start">
+                <span class="fw-bold fs-4">Rs. 1,000</span>
+                <span class="small text-muted">/month</span>
+              </div>
+
+              <h6 class="text-start fw-bold mb-3 small">What's included</h6>
+              <ul class="list-unstyled text-start mb-4 flex-grow-1 pricing-features">
+                <li class="mb-2"><i class="bi bi-check text-success me-2"></i> Access to 5 courses</li>
+                <li class="mb-2"><i class="bi bi-check text-success me-2"></i> Basic analytics</li>
+                <li class="mb-2 feature-disabled"><i class="bi bi-check text-muted me-2"></i> Custom branding (Rs. 500)</li>
+              </ul>
+
+              <div class="mt-auto">
+                <a href="#" class="btn btn-outline-primary w-100 fw-semibold rounded-3 py-2">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pro -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 border-0 position-relative pricing-card-pro">
+            <span class="badge badge-popular">Most Popular</span>
+            <div class="card-body d-flex flex-column p-4 border-end">
+              <h4 class="fw-bold mb-2 text-start text-white">Pro</h4>
+              <p class="text-start mb-4 small text-white-50">Perfect for growing educators and institutes.</p>
+
+              <div class="mb-4 text-start">
+                <span class="fw-bold fs-4">Rs. 2,500</span>
+                <span class="small text-white-50">/month</span>
+              </div>
+
+              <h6 class="text-start fw-bold mb-3 small text-white">What's included</h6>
+              <ul class="list-unstyled text-start mb-4 flex-grow-1 pricing-features">
+                <li class="mb-2"><i class="bi bi-check text-white me-2"></i> Access to 20 courses</li>
+                <li class="mb-2"><i class="bi bi-check text-white me-2"></i> Advanced analytics</li>
+                <li class="mb-2"><i class="bi bi-check text-white me-2"></i> Custom branding</li>
+              </ul>
+
+              <div class="mt-auto">
+                <a href="#" class="btn btn-light text-primary w-100 fw-semibold rounded-3 py-2">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 border-0 position-relative">
+            <div class="card-body d-flex flex-column p-4">
+              <h4 class="fw-bold mb-2 text-start">Enterprise</h4>
+              <p class="text-start mb-4 small text-muted">For large institutions needing tailored solutions.</p>
+
+              <div class="mb-3 text-start">
+                <p class="fw-bold mb-1 small">Need More?</p>
+                <p class="small mb-0 text-muted">Request us <a href="#" class="text-primary">here</a>.</p>
+              </div>
+
+              <div class="mb-4 text-start">
+                <span class="fw-bold fs-4">Rs. 5,000</span>
+                <span class="small text-muted">/month</span>
+              </div>
+
+              <h6 class="text-start fw-bold mb-3 small">What's included</h6>
+              <ul class="list-unstyled text-start mb-4 flex-grow-1 pricing-features">
+                <li class="mb-2"><i class="bi bi-check text-success me-2"></i> Unlimited courses</li>
+                <li class="mb-2"><i class="bi bi-check text-success me-2"></i> Dedicated support</li>
+                <li class="mb-2"><i class="bi bi-check text-success me-2"></i> Custom integrations</li>
+              </ul>
+
+              <div class="mt-auto">
+                <a href="#" class="btn btn-outline-primary w-100 fw-semibold rounded-3 py-2">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Platform Pricing Section -->
+  <div class="container-fluid py-5">
+    <div class="container">
+      <h2 class="display-6 fw-bold text-center mb-3">
+        Platform <span class="text-primary">Pricing</span>
+      </h2>
+      <p class="lead text-muted text-center mb-5 px-lg-5">
+        Everything you need to launch, run, and scale online learning.
+      </p>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <!-- Basic Requirements -->
+          <div class="card shadow-sm p-4 border rounded-4 mb-3">
+            <h4 class="fw-semibold mb-3"><i class="bi bi-person text-primary me-2"></i>Basic Requirement</h4>
+            <p class="text-muted mb-3">Core platform settings</p>
+
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label for="students" class="form-label fw-semibold">Students</label>
+                <input type="number" class="form-control basic-requirement-input" id="students" data-name="Students" data-price-per-student="10" data-discount="10" data-discount-if-count="100" value="100" min="0">
+              </div>
+              <div class="col-md-4">
+                <label for="courses" class="form-label fw-semibold">Courses</label>
+                <input type="number" class="form-control basic-requirement-input" id="courses" data-name="Courses" data-price-per-student="100" data-discount="0" data-discount-if-count="0" value="5" min="0">
+              </div>
+              <div class="col-md-4">
+                <label for="customizations" class="form-label fw-semibold">Customizations</label>
+                <input type="number" class="form-control basic-requirement-input" id="customizations" data-name="Customizations" data-price-per-student="200" data-discount="5" data-discount-if-count="3" value="3" min="0">
+              </div>
+            </div>
+          </div>
+
+          <!-- Features -->
+          <div class="card shadow-sm p-4 border rounded-4">
+            <h4 class="fw-semibold mb-3"><i class="bi bi-star text-primary me-2"></i>Features</h4>
+            <p class="text-muted mb-4">Select required features for your platform</p>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="d-flex justify-content-between align-items-center border p-3 rounded-3">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-globe text-primary me-2"></i>
+                    <label class="form-check-label ms-1" for="feature1">
+                      <strong>Online Exams</strong><br>
+                      <small class="text-muted">Rs 500</small>
+                    </label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input feature-toggle" type="checkbox" id="feature1" data-feature-name="Online Exams" data-feature-price="500" checked>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex justify-content-between align-items-center border p-3 rounded-3">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-globe text-primary me-2"></i>
+                    <label class="form-check-label ms-1" for="feature2">
+                      <strong>AI Grading</strong><br>
+                      <small class="text-muted">Rs 1000</small>
+                    </label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input feature-toggle" type="checkbox" id="feature2" data-feature-name="AI Grading" data-feature-price="1000" checked>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Price Summary -->
+        <div class="col-lg-5">
+          <div class="card bg-primary text-white shadow-sm p-4 rounded-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <h4 class="fw-bold mb-4 text-white">
+                Price Summary <br><small class="fw-normal">Annual Cost</small>
+              </h4>
+              <div id="price-summary-list" class="mb-4"></div>
+            </div>
+
+            <div class="text-center">
+              <h3 class="fw-bold text-white mb-3">Rs. <span id="total-price">0</span></h3>
+              <p class="text-white mb-4"><span class="bg-light bg-opacity-10 rounded-pill px-3 py-2 small">Per Year</span></p>
+              <a href="#" class="btn btn-light text-primary fw-semibold w-100 py-3">Request Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap + JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const basicRequirementInputs = document.querySelectorAll('.basic-requirement-input');
+      const featureToggles = document.querySelectorAll('.feature-toggle');
+      const priceSummaryList = document.getElementById('price-summary-list');
+      const totalPriceElement = document.getElementById('total-price');
+      const currency = 'Rs';
+
+      function formatPrice(price) {
+        return new Intl.NumberFormat('en-US', {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0
+        }).format(price);
+      }
+
+      function calculateTotalPrice() {
+        let totalCost = 0;
+        let summaryHtml = '';
+
+        basicRequirementInputs.forEach(input => {
+          const count = parseInt(input.value) || 0;
+          const name = input.dataset.name;
+          const pricePerUnit = parseFloat(input.dataset.pricePerStudent);
+          const discount = parseFloat(input.dataset.discount);
+          const discountIfCount = parseInt(input.dataset.discountIfCount);
+
+          if (count > 0 && pricePerUnit > 0) {
+            let itemCost = count * pricePerUnit;
+            let lineItemText = `${name} (${count}*${formatPrice(pricePerUnit)})`;
+
+            if (discountIfCount > 0 && count >= discountIfCount && discount > 0) {
+              const discountAmount = (itemCost * discount) / 100;
+              itemCost -= discountAmount;
+              lineItemText += ` - ${discount}% discount`;
+            }
+
+            totalCost += itemCost;
+            summaryHtml += `
+              <p class="d-flex justify-content-between mb-1">
+                <small>${lineItemText}</small>
+                <span class="fw-bold">${currency} ${formatPrice(itemCost)}</span>
+              </p>
+            `;
+          }
+        });
+
+        summaryHtml += `<hr class="my-3">`;
+
+        featureToggles.forEach(toggle => {
+          if (toggle.checked) {
+            const featureName = toggle.dataset.featureName;
+            const featurePrice = parseFloat(toggle.dataset.featurePrice);
+            totalCost += featurePrice;
+            summaryHtml += `
+              <p class="d-flex justify-content-between mb-1">
+                <small>${featureName}</small>
+                <span class="fw-bold">${currency} ${formatPrice(featurePrice)}</span>
+              </p>
+            `;
+          }
+        });
+
+        priceSummaryList.innerHTML = summaryHtml;
+        totalPriceElement.textContent = formatPrice(totalCost);
+      }
+
+      basicRequirementInputs.forEach(input => input.addEventListener('input', calculateTotalPrice));
+      featureToggles.forEach(toggle => toggle.addEventListener('change', calculateTotalPrice));
+
+      calculateTotalPrice();
+    });
+  </script>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>
