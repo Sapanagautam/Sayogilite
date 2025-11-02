@@ -76,7 +76,10 @@
       .active-nav {
         font-weight: 600 !important;
       }
-
+   .navbar-toggler .fa-xmark {
+  font-size: 2rem;
+  color: #9aaaa7; 
+}
       .btn-get-started {
         background-color: var(--bs-primary);
         border-color: var(--bs-primary);
@@ -262,7 +265,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-2">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <a class="navbar-brand d-flex align-items-center" href="home.html">
           <img
             src="images/project sayogi 1.jpg"
             alt="sayogilite"
@@ -366,7 +369,17 @@
             link.setAttribute("aria-current", "page");
           }
         });
-      });
+        const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.getElementById('navbarNav');
+    
+    navbarCollapse.addEventListener('show.bs.collapse', function () {
+navbarToggler.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    });
+    
+    navbarCollapse.addEventListener('hide.bs.collapse', function () {
+      navbarToggler.innerHTML = '<span class="navbar-toggler-icon"></span>';
+    });
+  });
     </script>
     <!-- Contact Section -->
     <section class="py-5 bg-light">
@@ -383,9 +396,24 @@
         <div class="row g-4">
           <!-- Send Us A Message Form -->
           <div class="col-lg-6">
-            <div class="bg-white p-4 rounded shadow-sm h-100">
+            <div class="bg-white p-4 rounded shadow-sm h-90">
               <h3 class="h5 fw-bold mb-4">SEND US A MESSAGE</h3>
-              <form>
+              <div
+                id="successMessage"
+                class="alert alert-dismissible fade show d-none bg-primary text-white"
+                role="alert"
+              >
+                <i class="fa-solid fa-circle-check me-2"></i>
+                <strong>Message sent successfully!</strong> We'll get back to
+                you soon.
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <form id="contactForm">
                 <div class="row g-3 mb-3">
                   <div class="col-md-6">
                     <label for="fullName" class="form-label">Full Name</label>
@@ -394,6 +422,7 @@
                       class="form-control"
                       id="fullName"
                       placeholder="full Name"
+                      required
                     />
                   </div>
                   <div class="col-md-6">
@@ -405,6 +434,9 @@
                       class="form-control"
                       id="phoneNumber"
                       placeholder="XXXXXXXXXX"
+                      pattern="[0-9]{10}"
+                      title="Please enter a valid 10-digit phone number"
+                      required
                     />
                   </div>
                 </div>
@@ -417,6 +449,7 @@
                     class="form-control"
                     id="emailAddress"
                     placeholder="youremail@gmail.com"
+                    required
                   />
                 </div>
                 <div class="mb-4">
@@ -426,6 +459,7 @@
                     id="message"
                     rows="4"
                     placeholder="write a message"
+                    required
                   ></textarea>
                 </div>
                 <div class="text-end">
@@ -505,6 +539,33 @@
         </div>
       </div>
     </section>
+
+    <!-- Contact Form Success Message Script -->
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Show success message
+          const successMessage = document.getElementById("successMessage");
+          successMessage.classList.remove("d-none");
+
+          // Scroll to success message
+          successMessage.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+
+          // Reset form
+          this.reset();
+
+          // Auto-hide message after 5 seconds
+          setTimeout(function () {
+            successMessage.classList.add("d-none");
+          }, 5000);
+        });
+    </script>
 
     <!-- Footer Section -->
     <footer class="bg-info text-white py-5 px-3 px-md-5">

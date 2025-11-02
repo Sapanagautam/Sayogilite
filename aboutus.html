@@ -76,6 +76,10 @@
         font-weight: 600 !important;
       }
 
+            .navbar-toggler .fa-xmark {
+  font-size: 2rem;
+  color: #9aaaa7; 
+}
        
       .btn-get-started {
         background-color: var(--bs-primary);
@@ -237,7 +241,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-2">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <a class="navbar-brand d-flex align-items-center" href="home.html">
           <img
             src="images/project sayogi 1.jpg"
             alt="sayogilite"
@@ -344,7 +348,17 @@
             link.setAttribute("aria-current", "page");
           }
         });
-      });
+        const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.getElementById('navbarNav');
+    
+    navbarCollapse.addEventListener('show.bs.collapse', function () {
+navbarToggler.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    });
+    
+    navbarCollapse.addEventListener('hide.bs.collapse', function () {
+      navbarToggler.innerHTML = '<span class="navbar-toggler-icon"></span>';
+    });
+  });
     </script>
     <!-- About Sayogilite Section -->
     <section class="container-fluid py-5 bg-white">
