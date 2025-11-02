@@ -66,7 +66,7 @@
       }
 
       .nav-link.active {
-        color: var(--bs-dark) !important;
+        color: var(--bs-primary) !important;
       }
 
       .active-nav {
@@ -307,12 +307,44 @@
       </div>
     </nav>
     
+    <!-- Active Nav Link Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get current page filename
+    let currentPage = window.location.pathname.split('/').pop();
+    
+    // Handle root or index
+    if (currentPage === '' || currentPage === 'index.html') {
+      currentPage = 'home.html';
+    }
+    
+    // Get all nav links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    // Remove active class from all links first
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+    
+    // Add active class to current page link
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      const page = link.getAttribute('data-page');
+      
+      if (href === currentPage || currentPage.includes(page)) {
+        link.classList.add('active');
+        // Update aria-current for accessibility
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+  });
+</script>
 
 <body class="bg-light">
 
   <!-- Pricing Section -->
   <div class="container-fluid py-5 bg-white">
-    <div class="container text-center" style="padding-top: 86px; padding-bottom: 86px;">
+    <div class="container text-center" style="padding-top: 86px; padding-bottom: 60px;">
       <h2 class="fw-bold mb-3" style="font-size: 2.5rem;">
         Flexible <span class="text-primary">Pricing</span> Options
       </h2>
@@ -409,98 +441,7 @@
     </div>
   </div>
 
-  <!-- Platform Pricing Section -->
-  <div class="container-fluid py-5">
-    <div class="container">
-      <h2 class="display-6 fw-bold text-center mb-3">
-        Platform <span class="text-primary">Pricing</span>
-      </h2>
-      <p class="lead text-muted text-center mb-5 px-lg-5">
-        Everything you need to launch, run, and scale online learning.
-      </p>
-
-      <div class="row g-4">
-        <div class="col-lg-7">
-          <!-- Basic Requirements -->
-          <div class="card shadow-sm p-4 border rounded-4 mb-3">
-            <h4 class="fw-semibold mb-3"><i class="bi bi-person text-primary me-2"></i>Basic Requirement</h4>
-            <p class="text-muted mb-3">Core platform settings</p>
-
-            <div class="row g-3">
-              <div class="col-md-4">
-                <label for="students" class="form-label fw-semibold">Students</label>
-                <input type="number" class="form-control basic-requirement-input" id="students" data-name="Students" data-price-per-student="10" data-discount="10" data-discount-if-count="100" value="100" min="0">
-              </div>
-              <div class="col-md-4">
-                <label for="courses" class="form-label fw-semibold">Courses</label>
-                <input type="number" class="form-control basic-requirement-input" id="courses" data-name="Courses" data-price-per-student="100" data-discount="0" data-discount-if-count="0" value="5" min="0">
-              </div>
-              <div class="col-md-4">
-                <label for="customizations" class="form-label fw-semibold">Customizations</label>
-                <input type="number" class="form-control basic-requirement-input" id="customizations" data-name="Customizations" data-price-per-student="200" data-discount="5" data-discount-if-count="3" value="3" min="0">
-              </div>
-            </div>
-          </div>
-
-          <!-- Features -->
-          <div class="card shadow-sm p-4 border rounded-4">
-            <h4 class="fw-semibold mb-3"><i class="bi bi-star text-primary me-2"></i>Features</h4>
-            <p class="text-muted mb-4">Select required features for your platform</p>
-
-            <div class="row g-3">
-              <div class="col-md-6">
-                <div class="d-flex justify-content-between align-items-center border p-3 rounded-3">
-                  <div class="d-flex align-items-start">
-                    <i class="bi bi-globe text-primary me-2"></i>
-                    <label class="form-check-label ms-1" for="feature1">
-                      <strong>Online Exams</strong><br>
-                      <small class="text-muted">Rs 500</small>
-                    </label>
-                  </div>
-                  <div class="form-check form-switch">
-                    <input class="form-check-input feature-toggle" type="checkbox" id="feature1" data-feature-name="Online Exams" data-feature-price="500" checked>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="d-flex justify-content-between align-items-center border p-3 rounded-3">
-                  <div class="d-flex align-items-start">
-                    <i class="bi bi-globe text-primary me-2"></i>
-                    <label class="form-check-label ms-1" for="feature2">
-                      <strong>AI Grading</strong><br>
-                      <small class="text-muted">Rs 1000</small>
-                    </label>
-                  </div>
-                  <div class="form-check form-switch">
-                    <input class="form-check-input feature-toggle" type="checkbox" id="feature2" data-feature-name="AI Grading" data-feature-price="1000" checked>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Price Summary -->
-        <div class="col-lg-5">
-          <div class="card bg-primary text-white shadow-sm p-4 rounded-4 h-100 d-flex flex-column justify-content-between">
-            <div>
-              <h4 class="fw-bold mb-4 text-white">
-                Price Summary <br><small class="fw-normal">Annual Cost</small>
-              </h4>
-              <div id="price-summary-list" class="mb-4"></div>
-            </div>
-
-            <div class="text-center">
-              <h3 class="fw-bold text-white mb-3">Rs. <span id="total-price">0</span></h3>
-              <p class="text-white mb-4"><span class="bg-light bg-opacity-10 rounded-pill px-3 py-2 small">Per Year</span></p>
-              <a href="#" class="btn btn-light text-primary fw-semibold w-100 py-3">Request Quote</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
 
   <!-- Bootstrap + JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -577,6 +518,101 @@
     });
   </script>
 
+<!-- Footer Section -->
+    <footer class="bg-info text-white py-5 px-3 px-md-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Logo and Social Links Column -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="d-flex flex-column h-100">
+                        <!-- Logo -->
+                        <div class="mb-4">
+                            <img src="images/project sayogi 1.jpg" alt="ProjectSayogi" class="img-fluid" style="max-width: 132px; height: auto;">
+                            
+                        </div>
+                        
+                        <!-- Social Icons -->
+                        <div class="social-icons mt-2">
+                            <a href="#" class="social-icon" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Link Column -->
+             <div class="col-lg-2 col-md-6 col-6">
+                    <h5 class="text-white mb-4 fw-medium">Quick Link</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li><a href="home.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="features.html" class="text-white text-decoration-none">Features</a></li>
+                        <li><a href="pricing.html" class="text-white text-decoration-none">Pricing</a></li>
+                        <li><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support Column -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h5 class="text-white mb-4 fw-medium">Support</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li><a href="#" class="text-white text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Privacy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Terms</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us Column -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h5 class="text-white mb-4 fw-medium">Contact Us</h5>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fa-solid fa-phone mt-1" style="color: #ffffff;"></i>
+                            <a href="tel:+9779802855356" class="text-white text-decoration-none">+9779802855356</a>
+                        </div>
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fa-solid fa-envelope mt-1" style="color: #ffffff;"></i>
+                            <a href="mailto:info@projectsayogi.com.np" class="text-white text-decoration-none">info@projectsayogi.com.np</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Column -->
+                <div class="col-lg-2 col-md-6 col-12">
+                    <h5 class="text-white mb-4 fw-medium">Download</h5>
+                    <div class="d-flex flex-column gap-3">
+                        <a href="#" class="text-decoration-none">
+                            <img src="images/GooglePlayimg.jpg" alt="Get it on Google Play" class="img-fluid" style="max-width: 140px;">
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <img src="images/AppStoreimg.jpg" alt="Download on App Store" class="img-fluid" style="max-width: 140px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Section -->
+            <div class="row mt-5 pt-4 border-top border-white border-opacity-25">
+                <div class="col-lg-6 col-12 text-center text-lg-start mb-3 mb-lg-0">
+                    <p class="mb-0 text-white">Copyright@2025- TukiSoft</p>
+                </div>
+                <div class="col-lg-6 col-12 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-end gap-2">
+                        <span class="text-white">Powered By:</span>
+                        <img src="images/tuki logo 1.jpg" alt="TUKI" class="img-fluid" style="max-height: 30px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 </body>

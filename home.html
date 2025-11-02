@@ -66,7 +66,7 @@
       }
 
       .nav-link.active {
-        color: var(--bs-dark) !important;
+        color: var(--bs-primary) !important;
       }
 
       .active-nav {
@@ -279,6 +279,42 @@
       </div>
     </nav>
 
+    <!-- Bootstrap Bundle with Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+<!-- Active Nav Link Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get current page filename
+    let currentPage = window.location.pathname.split('/').pop();
+    
+    // Handle root or index
+    if (currentPage === '' || currentPage === 'index.html') {
+      currentPage = 'home.html';
+    }
+    
+    // Get all nav links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    // Remove active class from all links first
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+    
+    // Add active class to current page link
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      const page = link.getAttribute('data-page');
+      
+      if (href === currentPage || currentPage.includes(page)) {
+        link.classList.add('active');
+        // Update aria-current for accessibility
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+  });
+</script>
+    
     <!-- Hero Section -->
     <section class="bg-white overflow-hidden" style="margin-top: 86px;">
       <div class="container" style="padding-top: 86px; padding-bottom: 86px;">
@@ -330,7 +366,7 @@
     </section>
 
     <!-- Built for Construction Excellence Section -->
-    <section class="bg-light py-5">
+    <section class="bg-light py-4">
       <div class="container py-5">
         
         <div class="text-center mb-5 pb-3">
@@ -434,90 +470,98 @@
     </section>
 
     <!-- Everything You Need Section -->
-    <section class="py-5 bg-white">
-        <div class="container">
-            <!-- Header -->
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-semibold mb-3">Everything You Need</h2>
-                <p class="text-muted fs-6 mx-auto" style="max-width: 643px;">
-                    Discover the comprehensive features that make Sayogi the ultimate construction management platform.
-                </p>
-            </div>
-
-            <!-- Features Grid -->
-            <div class="row g-4 mb-4">
-                
-                <!-- Site Creation -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 border rounded-3 shadow-sm feature-card">
-                        <img src="images/Site 1.jpg" 
-                             alt="Site Creation" 
-                             class="card-img-top rounded-top-3">
-                        <div class="card-body p-3 text-center">
-                            <h5 class="card-title fw-semibold fs-6 mb-2">Site Creation</h5>
-                            <p class="card-text text-muted small mb-0">
-                                Create and setup new construction sites with detailed project information and specifications.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Financial Management -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 border rounded-3 shadow-sm feature-card">
-                        <img src="images/3 1.jpg" 
-                             alt="Financial Management" 
-                             class="card-img-top rounded-top-3">
-                        <div class="card-body p-3 text-center">
-                            <h5 class="card-title fw-semibold fs-6 mb-2">Financial Management</h5>
-                            <p class="card-text text-muted small mb-0">
-                                Create and setup new construction sites with detailed project information and specifications.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rate Setting -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 border rounded-3 shadow-sm feature-card">
-                        <img src="images/4 3.jpg" 
-                             alt="Rate Setting" 
-                             class="card-img-top rounded-top-3">
-                        <div class="card-body p-3 text-center">
-                            <h5 class="card-title fw-semibold fs-6 mb-2">Rate Setting</h5>
-                            <p class="card-text text-muted small mb-0">
-                                Create a Site and can add Rate of each product and Services.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Party Management -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 border rounded-3 shadow-sm feature-card">
-                        <img src="images/5 2.jpg" 
-                             alt="Party Management" 
-                             class="card-img-top rounded-top-3">
-                        <div class="card-body p-3 text-center">
-                            <h5 class="card-title fw-semibold fs-6 mb-2">Party Management</h5>
-                            <p class="card-text text-muted small mb-0">
-                                Manage contractors, suppliers, clients, and other stakeholders in one centralized system.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- View More Button -->
-            <div class="text-center">
-                <a href="#" class="btn btn-lg px-3 py-2 text-white fw-normal rounded-3" 
-                   style="background-color: var(--bs-primary);">
-                    View More
-                    <i class="bi bi-arrow-right ms-2"></i>
-                </a>
-            </div>
+<section class="py-5 bg-white">
+    <div class="container">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-semibold mb-3">Everything You Need</h2>
+            <p class="text-muted fs-6 mx-auto" style="max-width: 643px;">
+                Discover the comprehensive features that make Sayogi the ultimate construction management platform.
+            </p>
         </div>
-    </section>
+
+        <!-- Features Grid -->
+        <div class="row g-4 mb-4" id="featuresGrid">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+
+        <!-- View More Button -->
+        <div class="text-center">
+            <a href="features.html" class="btn btn-lg px-3 py-2 text-white fw-normal rounded-3" 
+               style="background-color: var(--bs-primary);">
+                View More
+                <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Features data array
+    const features = [
+        {
+            image: "images/Site 1.jpg",
+            alt: "Site Creation",
+            title: "Site Creation",
+            description: "Create and setup new construction sites with detailed project information and specifications."
+        },
+        {
+            image: "images/3 1.jpg",
+            alt: "Financial Management",
+            title: "Financial Management",
+            description: "Create and setup new construction sites with detailed project information and specifications."
+        },
+        {
+            image: "images/4 3.jpg",
+            alt: "Rate Setting",
+            title: "Rate Setting",
+            description: "Create a Site and can add Rate of each product and Services."
+        },
+        {
+            image: "images/5 2.jpg",
+            alt: "Party Management",
+            title: "Party Management",
+            description: "Manage contractors, suppliers, clients, and other stakeholders in one centralized system."
+        }
+    ];
+
+    // Function to create feature cards
+    function createFeatureCards() {
+        const featuresGrid = document.getElementById('featuresGrid');
+        
+        // Only show first 4 cards on home page
+        const cardsToShow = features.slice(0, 4);
+        
+        cardsToShow.forEach(feature => {
+            // Create column div
+            const colDiv = document.createElement('div');
+            colDiv.className = 'col-12 col-md-6 col-lg-3';
+            
+            // Create card HTML
+            colDiv.innerHTML = `
+                <div class="card h-100 border rounded-3 shadow-sm feature-card">
+                    <img src="${feature.image}" 
+                         alt="${feature.alt}" 
+                         class="card-img-top rounded-top-3">
+                    <div class="card-body p-3 text-center">
+                        <h5 class="card-title fw-semibold fs-6 mb-2">${feature.title}</h5>
+                        <p class="card-text text-muted small mb-0">
+                            ${feature.description}
+                        </p>
+                    </div>
+                </div>
+            `;
+            
+            // Append to grid
+            featuresGrid.appendChild(colDiv);
+        });
+    }
+
+    // Initialize cards when DOM is loaded
+    document.addEventListener('DOMContentLoaded', createFeatureCards);
+</script>
+
+  
 
     <!-- Mobile-First Construction Management Section -->
     <section class="py-5 bg-white">
@@ -655,6 +699,7 @@
             </div>
         </div>
     </section>
+    
 <!-- Testimonials Section -->
 <section class="bg-white py-5">
     <div class="container py-5">
@@ -830,13 +875,13 @@
                 </div>
 
                 <!-- Quick Link Column -->
-                <div class="col-lg-2 col-md-6 col-6">
+               <div class="col-lg-2 col-md-6 col-6">
                     <h5 class="text-white mb-4 fw-medium">Quick Link</h5>
                     <ul class="list-unstyled d-flex flex-column gap-3">
-                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Features</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Pricing</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="home.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="features.html" class="text-white text-decoration-none">Features</a></li>
+                        <li><a href="pricing.html" class="text-white text-decoration-none">Pricing</a></li>
+                        <li><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
                     </ul>
                 </div>
 

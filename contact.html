@@ -66,7 +66,7 @@
       }
 
       .nav-link.active {
-        color: var(--bs-dark) !important;
+        color: var(--bs-primary) !important;
       }
 
       .active-nav {
@@ -280,6 +280,40 @@
       </div>
     </nav>
 
+   
+
+<!-- Active Nav Link Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get current page filename
+    let currentPage = window.location.pathname.split('/').pop();
+    
+    // Handle root or index
+    if (currentPage === '' || currentPage === 'index.html') {
+      currentPage = 'home.html';
+    }
+    
+    // Get all nav links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    // Remove active class from all links first
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+    
+    // Add active class to current page link
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      const page = link.getAttribute('data-page');
+      
+      if (href === currentPage || currentPage.includes(page)) {
+        link.classList.add('active');
+        // Update aria-current for accessibility
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+  });
+</script>
     <!-- Contact Section -->
     <section class="py-5 bg-light ">
         <div class="container  "  style="padding-top: 86px;"  >
@@ -406,14 +440,13 @@
                     </div>
                 </div>
 
-                <!-- Quick Link Column -->
-                <div class="col-lg-2 col-md-6 col-6">
+            <div class="col-lg-2 col-md-6 col-6">
                     <h5 class="text-white mb-4 fw-medium">Quick Link</h5>
                     <ul class="list-unstyled d-flex flex-column gap-3">
-                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Features</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Pricing</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="home.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="features.html" class="text-white text-decoration-none">Features</a></li>
+                        <li><a href="pricing.html" class="text-white text-decoration-none">Pricing</a></li>
+                        <li><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
                     </ul>
                 </div>
 
