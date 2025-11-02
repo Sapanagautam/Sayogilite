@@ -33,6 +33,8 @@
         --primary-light: #ADEBDB;
         --bg-light-cyan: #D5F2F0;
         --text-dark: #222222;
+          --primary-hover: #128B6B;
+
       }
 
       .bg-light-cyan {
@@ -80,12 +82,12 @@
       .btn-get-started {
         background-color: var(--bs-primary);
         border-color: var(--bs-primary);
-        width: 141px;
+        width: fit-content;
         height: 40px;
-        padding: 8px 20px 8px 12px;
-        font-family: 'DM Sans', sans-serif;
+  padding: 10px 20px;
+          font-family: 'Poppins', sans-serif;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 24px;
         letter-spacing: -0.09px;
         border-radius: 4px;
@@ -94,8 +96,8 @@
       }
 
       .btn-get-started:hover {
-        background-color: #9ea1a0;
-        border-color: #9aaaa7;
+        background-color: #179372;
+        border-color: #179372;
         color: white;
         transform: translateY(-1px);
       }
@@ -229,6 +231,31 @@
 .testimonial-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.btn.bg-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  transition: all 0.3s ease;
+}
+
+.btn.bg-primary:hover {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 177, 137, 0.3);
+}
+
+.btn.border-primary {
+  transition: all 0.3s ease;
+}
+
+.btn.border-primary:hover {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 177, 137, 0.3);
 }
 
     </style>
@@ -501,7 +528,7 @@ navbarToggler.innerHTML = '<i class="fa-solid fa-xmark"></i>';
 
         <!-- View More Button -->
         <div class="text-center">
-            <a href="features.html" class="btn btn-lg px-3 py-2 text-white fw-normal rounded-3" 
+            <a href="features.html" class="btn bg-primary btn-lg px-3 py-2 text-white fw-normal rounded-3" 
                style="background-color: var(--bs-primary);">
                 View More
                 <i class="bi bi-arrow-right ms-2"></i>
@@ -642,7 +669,7 @@ navbarToggler.innerHTML = '<i class="fa-solid fa-xmark"></i>';
                     <h1 class="display-5 fw-semibold mb-0">Frequently Asked</h1>
                     <h1 class="display-5 fw-semibold text-primary mb-4">Questions</h1>
                     <p class="text-secondary mb-4">Still have questions? Get connected to our support team.</p>
-                    <a href="contact.html" class="btn text-white btn-lg px-3 py-2" style="background-color: var(--bs-primary);">Contact Us</a>
+                    <a href="contact.html" class="btn bg-primary text-white btn-lg px-3 py-2" style="background-color: var(--bs-primary);">Contact Us</a>
                 </div>
             </div>
 
