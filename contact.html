@@ -12,28 +12,31 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css"
     />
     <style>
       :root {
-        --bs-primary: #1AB189;
+        --bs-primary: #1ab189;
         --bs-primary-rgb: 26, 177, 137;
         --bs-secondary: #555555;
         --bs-secondary-rgb: 85, 85, 85;
         --bs-dark: #000000;
         --bs-dark-rgb: 0, 0, 0;
-        --bs-warning: #FF980E;
+        --bs-warning: #ff980e;
         --bs-warning-rgb: 255, 152, 14;
-        --bs-info: #186B97;
+        --bs-info: #186b97;
         --bs-info-rgb: 24, 107, 151;
-        --primary-dark: #128B6B;
-        --primary-light: #ADEBDB;
-        --bg-light-cyan: #D5F2F0;
+        --primary-dark: #128b6b;
+        --primary-light: #adebdb;
+        --bg-light-cyan: #d5f2f0;
         --text-dark: #222222;
-        --primary-hover: #128B6B;
+        --primary-hover: #128b6b;
       }
 
       .bg-light-cyan {
@@ -45,11 +48,11 @@
       }
 
       body {
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
       }
 
       .navbar {
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
 
       .brand-logo-img {
@@ -58,7 +61,7 @@
       }
 
       .nav-link {
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         transition: color 0.3s ease;
       }
 
@@ -74,14 +77,13 @@
         font-weight: 600 !important;
       }
 
-      
       .btn-get-started {
         background-color: var(--bs-primary);
         border-color: var(--bs-primary);
         width: fit-content;
         height: 40px;
-  padding: 10px 20px;
-          font-family: 'Poppins', sans-serif;
+        padding: 10px 20px;
+        font-family: "Poppins", sans-serif;
         font-weight: 500;
         font-size: 15px;
         line-height: 24px;
@@ -179,7 +181,7 @@
         .navbar-collapse {
           margin-top: 15px;
         }
-        
+
         .btn-get-started {
           margin-top: 15px;
           width: fit-content;
@@ -220,45 +222,43 @@
         color: var(--bs-info);
         border-color: #ffffff;
       }
-.testimonial-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+      .testimonial-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+      }
 
+      .btn.bg-primary {
+        background-color: var(--bs-primary) !important;
+        border-color: var(--bs-primary) !important;
+        transition: all 0.3s ease;
+      }
 
-.btn.bg-primary {
-  background-color: var(--bs-primary) !important;
-  border-color: var(--bs-primary) !important;
-  transition: all 0.3s ease;
-}
+      .btn.bg-primary:hover {
+        background-color: var(--primary-hover) !important;
+        border-color: var(--primary-hover) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(26, 177, 137, 0.3);
+      }
 
-.btn.bg-primary:hover {
-  background-color: var(--primary-hover) !important;
-  border-color: var(--primary-hover) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(26, 177, 137, 0.3);
-}
+      .btn.border-primary {
+        transition: all 0.3s ease;
+      }
 
-.btn.border-primary {
-  transition: all 0.3s ease;
-}
-
-.btn.border-primary:hover {
-  background-color: var(--bs-primary) !important;
-  border-color: var(--bs-primary) !important;
-  color: white !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(26, 177, 137, 0.3);
-}
-
+      .btn.border-primary:hover {
+        background-color: var(--bs-primary) !important;
+        border-color: var(--bs-primary) !important;
+        color: white !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(26, 177, 137, 0.3);
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-light m-0 p-0">
+  <body class="bg-light m-0 p-0">
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-2">
       <div class="container">
@@ -269,7 +269,7 @@
             class="brand-logo-img"
           />
         </a>
-        
+
         <button
           class="navbar-toggler border-0"
           type="button"
@@ -281,255 +281,379 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto gap-4">
             <li class="nav-item">
-              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="home.html">Home</a>
+              <a
+                class="nav-link text-secondary p-0 fw-medium fs-6"
+                style="line-height: 28px; height: 28px"
+                href="home.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="aboutus.html">About Us</a>
+              <a
+                class="nav-link text-secondary p-0 fw-medium fs-6"
+                style="line-height: 28px; height: 28px"
+                href="aboutus.html"
+                >About Us</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="features.html">Features</a>
+              <a
+                class="nav-link text-secondary p-0 fw-medium fs-6"
+                style="line-height: 28px; height: 28px"
+                href="features.html"
+                >Features</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="pricing.html">Pricing</a>
+              <a
+                class="nav-link text-secondary p-0 fw-medium fs-6"
+                style="line-height: 28px; height: 28px"
+                href="pricing.html"
+                >Pricing</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="contact.html">Contact Us</a>
+              <a
+                class="nav-link text-secondary p-0 fw-medium fs-6"
+                style="line-height: 28px; height: 28px"
+                href="contact.html"
+                >Contact Us</a
+              >
             </li>
           </ul>
-          
-          <a href="#" class="btn btn-get-started text-white text-decoration-none d-inline-flex align-items-center">
+
+          <a
+            href="#"
+            class="btn btn-get-started text-white text-decoration-none d-inline-flex align-items-center"
+          >
             Get Started <i class="bi bi-chevron-right ms-2"></i>
           </a>
         </div>
       </div>
     </nav>
 
-   
+    <!-- Active Nav Link Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get current page filename
+        let currentPage = window.location.pathname.split("/").pop();
 
-<!-- Active Nav Link Script -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Get current page filename
-    let currentPage = window.location.pathname.split('/').pop();
-    
-    // Handle root or index
-    if (currentPage === '' || currentPage === 'index.html') {
-      currentPage = 'home.html';
-    }
-    
-    // Get all nav links
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    
-    // Remove active class from all links first
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-    });
-    
-    // Add active class to current page link
-    navLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      const page = link.getAttribute('data-page');
-      
-      if (href === currentPage || currentPage.includes(page)) {
-        link.classList.add('active');
-        // Update aria-current for accessibility
-        link.setAttribute('aria-current', 'page');
-      }
-    });
-  });
-</script>
+        // Handle root or index
+        if (currentPage === "" || currentPage === "index.html") {
+          currentPage = "home.html";
+        }
+
+        // Get all nav links
+        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        // Remove active class from all links first
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+        });
+
+        // Add active class to current page link
+        navLinks.forEach((link) => {
+          const href = link.getAttribute("href");
+          const page = link.getAttribute("data-page");
+
+          if (href === currentPage || currentPage.includes(page)) {
+            link.classList.add("active");
+            // Update aria-current for accessibility
+            link.setAttribute("aria-current", "page");
+          }
+        });
+      });
+    </script>
     <!-- Contact Section -->
-    <section class="py-5 bg-light ">
-        <div class="container  "  style="padding-top: 86px;"  >
-            <!-- Contact Header -->
-            <div class="text-center mb-4">
-                <h2 class="text-primary  fw-bold mb-3">Contact Us</h2>
-                <p class="text-muted">Ready to Create your next Construction site? Contact us to check availability or to subscription with our beautiful team.</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Send Us A Message Form -->
-                <div class="col-lg-6">
-                    <div class="bg-white p-4 rounded shadow-sm h-100">
-                        <h3 class="h5 fw-bold mb-4">SEND US A MESSAGE</h3>
-                        <form>
-                            <div class="row g-3 mb-3">
-                                <div class="col-md-6">
-                                    <label for="fullName" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="fullName" placeholder="full Name">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="phoneNumber" class="form-label">Phone Number</label>
-                                    <input type="tel" class="form-control" id="phoneNumber" placeholder="XXXXXXXXXX">
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="emailAddress" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="emailAddress" placeholder="youremail@gmail.com">
-                            </div>
-                            <div class="mb-4">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="4" placeholder="write a message"></textarea>
-                            </div>
-                            <div class="text-end">
-<button type="submit" class="btn bg-primary text-white px-4 py-2">Send Inquiry</button>                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Contact Information -->
-                <div class="col-lg-6">
-                    <div class="bg-white p-4 rounded shadow-sm h-100 ">
-                        <h3 class="h5 fw-bold mb-4">Contact Information</h3>
-                        
-                        <!-- Address -->
-                        <div class="d-flex align-items-start mb-4 pb-3">
-                            <div class="text-success me-3 flex-shrink-0">
-                                <i class="fa-solid fa-location-dot" style="color: #1AB189;"></i>
-                            </div>
-                            <div class="flex-grow-1">
-                                <h6 class="text-success fw-semibold mb-2">Address:</h6>
-                                <p class="mb-0 text-dark">Sundar Marga, Pokhara, Nepal</p>
-                            </div>
-                        </div>
-
-                        <!-- Phone Number -->
-                        <div class="d-flex align-items-start mb-4 pb-3">
-                            <div class="text-success me-3 flex-shrink-0">
-                                <i class="fa-solid fa-phone" style="color: #1AB189;"></i>
-                            </div>
-                            <div class="flex-grow-1">
-                                <h6 class="text-success fw-semibold mb-2">Phone Number:</h6>
-                                <p class="mb-1 text-dark">+9779802855356</p>
-                                <p class="mb-0 text-dark">+9779802855356</p>
-                            </div>
-                        </div>
-
-                        <!-- Email -->
-                        <div class="d-flex align-items-start mb-4 pb-3">
-                            <div class="text-success me-3 flex-shrink-0">
-                                <i class="fa-solid fa-envelope"  style="color: #1AB189;" ></i>
-                            </div>
-                            <div class="flex-grow-1">
-                                <h6 class="text-success fw-semibold mb-2">Email:</h6>
-                                <p class="mb-0 text-dark">info@example.com</p>
-                            </div>
-                        </div>
-
-                        <!-- WhatsApp for user Button -->
-                        <div class="text-center  mt-4 pt-4">
-                            <a href="https://wa.me/9779802855356?text=Hello%20there!" target="_blank" class="text-decoration-none">
-<button class="btn bg-primary text-white w-100 py-2 rounded-3">        <i class="fa-brands fa-whatsapp me-2" style="color: #ffffff;"></i>
-        Chat with us on WhatsApp 
-    </button>
-</a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="py-5 bg-light">
+      <div class="container" style="padding-top: 86px">
+        <!-- Contact Header -->
+        <div class="text-center mb-4">
+          <h2 class="text-primary fw-bold mb-3">Contact Us</h2>
+          <p class="text-muted">
+            Ready to Create your next Construction site? Contact us to check
+            availability or to subscription with our beautiful team.
+          </p>
         </div>
+
+        <div class="row g-4">
+          <!-- Send Us A Message Form -->
+          <div class="col-lg-6">
+            <div class="bg-white p-4 rounded shadow-sm h-100">
+              <h3 class="h5 fw-bold mb-4">SEND US A MESSAGE</h3>
+              <form>
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fullName"
+                      placeholder="full Name"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phoneNumber" class="form-label"
+                      >Phone Number</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phoneNumber"
+                      placeholder="XXXXXXXXXX"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="emailAddress" class="form-label"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailAddress"
+                    placeholder="youremail@gmail.com"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="4"
+                    placeholder="write a message"
+                  ></textarea>
+                </div>
+                <div class="text-end">
+                  <button
+                    type="submit"
+                    class="btn bg-primary text-white px-4 py-2"
+                  >
+                    Send Inquiry
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="col-lg-6">
+            <div class="bg-white p-4 rounded shadow-sm h-100">
+              <h3 class="h5 fw-bold mb-4">Contact Information</h3>
+
+              <!-- Address -->
+              <div class="d-flex align-items-start mb-4 pb-3">
+                <div class="text-success me-3 flex-shrink-0">
+                  <i
+                    class="fa-solid fa-location-dot"
+                    style="color: #1ab189"
+                  ></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="text-success fw-semibold mb-2">Address:</h6>
+                  <p class="mb-0 text-dark">Sundar Marga, Pokhara, Nepal</p>
+                </div>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="d-flex align-items-start mb-4 pb-3">
+                <div class="text-success me-3 flex-shrink-0">
+                  <i class="fa-solid fa-phone" style="color: #1ab189"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="text-success fw-semibold mb-2">Phone Number:</h6>
+                  <p class="mb-1 text-dark">+9779802855356</p>
+                  <p class="mb-0 text-dark">+9779802855356</p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="d-flex align-items-start mb-4 pb-3">
+                <div class="text-success me-3 flex-shrink-0">
+                  <i class="fa-solid fa-envelope" style="color: #1ab189"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="text-success fw-semibold mb-2">Email:</h6>
+                  <p class="mb-0 text-dark">info@example.com</p>
+                </div>
+              </div>
+
+              <!-- WhatsApp for user Button -->
+              <div class="text-center mt-4 pt-4">
+                <a
+                  href="https://wa.me/9779802855356?text=Hello%20there!"
+                  target="_blank"
+                  class="text-decoration-none"
+                >
+                  <button
+                    class="btn bg-primary text-white w-100 py-2 rounded-3"
+                  >
+                    <i
+                      class="fa-brands fa-whatsapp me-2"
+                      style="color: #ffffff"
+                    ></i>
+                    Chat with us on WhatsApp
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
- <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer class="bg-info text-white py-5 px-3 px-md-5">
-        <div class="container">
-            <div class="row g-4">
-                <!-- Logo and Social Links Column -->
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="d-flex flex-column h-100">
-                        <!-- Logo -->
-                        <div class="mb-4">
-                            <img src="images/project sayogi 1.jpg" alt="ProjectSayogi" class="img-fluid" style="max-width: 132px; height: auto;">
-                            
-                        </div>
-                        
-                        <!-- Social Icons -->
-                        <div class="social-icons mt-2">
-                            <a href="#" class="social-icon" aria-label="Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="social-icon" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-icon" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="social-icon" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row g-4">
+          <!-- Logo and Social Links Column -->
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="d-flex flex-column h-100">
+              <!-- Logo -->
+              <div class="mb-4">
+                <img
+                  src="images/project sayogi 1.jpg"
+                  alt="ProjectSayogi"
+                  class="img-fluid"
+                  style="max-width: 132px; height: auto"
+                />
+              </div>
 
-            <div class="col-lg-2 col-md-6 col-6">
-                    <h5 class="text-white mb-4 fw-medium">Quick Link</h5>
-                    <ul class="list-unstyled d-flex flex-column gap-3">
-                        <li><a href="home.html" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="features.html" class="text-white text-decoration-none">Features</a></li>
-                        <li><a href="pricing.html" class="text-white text-decoration-none">Pricing</a></li>
-                        <li><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
-                    </ul>
-                </div>
-
-                <!-- Support Column -->
-                <div class="col-lg-2 col-md-6 col-6">
-                    <h5 class="text-white mb-4 fw-medium">Support</h5>
-                    <ul class="list-unstyled d-flex flex-column gap-3">
-                        <li><a href="#" class="text-white text-decoration-none">Help Center</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Privacy</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Terms</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Us Column -->
-                <div class="col-lg-3 col-md-6 col-12">
-                    <h5 class="text-white mb-4 fw-medium">Contact Us</h5>
-                    <div class="d-flex flex-column gap-3">
-                        <div class="d-flex align-items-start gap-2">
-                            <i class="fa-solid fa-phone mt-1" style="color: #ffffff;"></i>
-                            <a href="tel:+9779802855356" class="text-white text-decoration-none">+9779802855356</a>
-                        </div>
-                        <div class="d-flex align-items-start gap-2">
-                            <i class="fa-solid fa-envelope mt-1" style="color: #ffffff;"></i>
-                            <a href="mailto:info@projectsayogi.com.np" class="text-white text-decoration-none">info@projectsayogi.com.np</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Download Column -->
-                <div class="col-lg-2 col-md-6 col-12">
-                    <h5 class="text-white mb-4 fw-medium">Download</h5>
-                    <div class="d-flex flex-column gap-3">
-                        <a href="#" class="text-decoration-none">
-                            <img src="images/GooglePlayimg.jpg" alt="Get it on Google Play" class="img-fluid" style="max-width: 140px;">
-                        </a>
-                        <a href="#" class="text-decoration-none">
-                            <img src="images/AppStoreimg.jpg" alt="Download on App Store" class="img-fluid" style="max-width: 140px;">
-                        </a>
-                    </div>
-                </div>
+              <!-- Social Icons -->
+              <div class="social-icons mt-2">
+                <a href="#" class="social-icon" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
             </div>
+          </div>
 
-            <!-- Bottom Copyright Section -->
-            <div class="row mt-5 pt-4 border-top border-white border-opacity-25">
-                <div class="col-lg-6 col-12 text-center text-lg-start mb-3 mb-lg-0">
-                    <p class="mb-0 text-white">Copyright@2025- TukiSoft</p>
-                </div>
-                <div class="col-lg-6 col-12 text-center text-lg-end">
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-end gap-2">
-                        <span class="text-white">Powered By:</span>
-                        <img src="images/tuki logo 1.jpg" alt="TUKI" class="img-fluid" style="max-height: 30px;">
-                    </div>
-                </div>
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="text-white mb-4 fw-medium">Quick Link</h5>
+            <ul class="list-unstyled d-flex flex-column gap-3">
+              <li>
+                <a href="home.html" class="text-white text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="features.html" class="text-white text-decoration-none"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a href="pricing.html" class="text-white text-decoration-none"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a href="aboutus.html" class="text-white text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support Column -->
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="text-white mb-4 fw-medium">Support</h5>
+            <ul class="list-unstyled d-flex flex-column gap-3">
+              <li>
+                <a href="#" class="text-white text-decoration-none"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none">Privacy</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none">Terms</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Us Column -->
+          <div class="col-lg-3 col-md-6 col-12">
+            <h5 class="text-white mb-4 fw-medium">Contact Us</h5>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex align-items-start gap-2">
+                <i class="fa-solid fa-phone mt-1" style="color: #ffffff"></i>
+                <a
+                  href="tel:+9779802855356"
+                  class="text-white text-decoration-none"
+                  >+9779802855356</a
+                >
+              </div>
+              <div class="d-flex align-items-start gap-2">
+                <i class="fa-solid fa-envelope mt-1" style="color: #ffffff"></i>
+                <a
+                  href="mailto:info@projectsayogi.com.np"
+                  class="text-white text-decoration-none"
+                  >info@projectsayogi.com.np</a
+                >
+              </div>
             </div>
+          </div>
+
+          <!-- Download Column -->
+          <div class="col-lg-2 col-md-6 col-12">
+            <h5 class="text-white mb-4 fw-medium">Download</h5>
+            <div class="d-flex flex-column gap-3">
+              <a href="#" class="text-decoration-none">
+                <img
+                  src="images/GooglePlayimg.jpg"
+                  alt="Get it on Google Play"
+                  class="img-fluid"
+                  style="max-width: 140px"
+                />
+              </a>
+              <a href="#" class="text-decoration-none">
+                <img
+                  src="images/AppStoreimg.jpg"
+                  alt="Download on App Store"
+                  class="img-fluid"
+                  style="max-width: 140px"
+                />
+              </a>
+            </div>
+          </div>
         </div>
+
+        <!-- Bottom Copyright Section -->
+        <div class="row mt-5 pt-4 border-top border-white border-opacity-25">
+          <div class="col-lg-6 col-12 text-center text-lg-start mb-3 mb-lg-0">
+            <p class="mb-0 text-white">Copyright@2025- TukiSoft</p>
+          </div>
+          <div class="col-lg-6 col-12 text-center text-lg-end">
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-lg-end gap-2"
+            >
+              <span class="text-white">Powered By:</span>
+              <img
+                src="images/tuki logo 1.jpg"
+                alt="TUKI"
+                class="img-fluid"
+                style="max-height: 30px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
