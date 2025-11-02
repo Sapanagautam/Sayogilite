@@ -73,6 +73,10 @@
         font-weight: 600 !important;
       }
 
+      .navbar-toggler .fa-xmark {
+  font-size: 2rem;
+  color: #9aaaa7; 
+}
       .btn-get-started {
         background-color: var(--bs-primary);
         border-color: var(--bs-primary);
@@ -309,6 +313,18 @@
         // Update aria-current for accessibility
         link.setAttribute('aria-current', 'page');
       }
+    });
+
+    // Toggle between hamburger and X icon
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.getElementById('navbarNav');
+    
+    navbarCollapse.addEventListener('show.bs.collapse', function () {
+navbarToggler.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    });
+    
+    navbarCollapse.addEventListener('hide.bs.collapse', function () {
+      navbarToggler.innerHTML = '<span class="navbar-toggler-icon"></span>';
     });
   });
 </script>
