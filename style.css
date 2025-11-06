@@ -265,3 +265,18 @@
     .feature-disabled {
       color: #d1d5db;
     }
+
+/* Pricing section buttons hover effects - ONLY for Basic and Enterprise cards */
+.card-body .btn-outline-primary {
+  color: var(--bs-primary) !important;
+        border-color: var(--bs-primary);
+  transition: all 0.3s ease;
+}
+
+.card-body .btn-outline-primary:hover {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 177, 137, 0.3);
+}
