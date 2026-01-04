@@ -291,101 +291,111 @@ navbarToggler.innerHTML = '<i class="fa-solid fa-xmark"></i>';
     });
   </script>
 
-<!-- Footer Section -->
-    <footer class="bg-info text-white py-5 px-3 px-md-5">
-        <div class="container">
-            <div class="row g-4">
-                <!-- Logo and Social Links Column -->
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="d-flex flex-column h-100">
-                        <!-- Logo -->
-                        <div class="mb-4">
-                            <img src="images/project sayogi 1.jpg" alt="ProjectSayogi" class="img-fluid" style="max-width: 132px; height: auto;">
-                            
-                        </div>
-                        
-                        <!-- Social Icons -->
-                        <div class="social-icons mt-2">
-                            <a href="#" class="social-icon" aria-label="Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="social-icon" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-icon" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="social-icon" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
+  <!-- Footer Section -->
+<footer class="text-white py-5" style="background-color: var(--bg-sayogi-dark);">
+    <div class="container">
+        <div class="row g-0"> <!-- g-0 for no default gap -->
+            <!-- Logo and Social Icons Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="d-flex flex-column h-100">
+                    <div class="mb-0">
+                        <img src="images/Sayogilitelogo.jpg" alt="Project Sayogi Lite Logo" class="img-fluid" style="max-width: 200px;">
                     </div>
-                </div>
-
-                <!-- Quick Link Column -->
-             <div class="col-lg-2 col-md-6 col-6">
-                    <h5 class="text-white mb-4 fw-medium">Quick Link</h5>
-                    <ul class="list-unstyled d-flex flex-column gap-3">
-                        <li><a href="home.html" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="features.html" class="text-white text-decoration-none">Features</a></li>
-                        <li><a href="pricing.html" class="text-white text-decoration-none">Pricing</a></li>
-                        <li><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
-                    </ul>
-                </div>
-
-                <!-- Support Column -->
-                <div class="col-lg-2 col-md-6 col-6">
-                    <h5 class="text-white mb-4 fw-medium">Support</h5>
-                    <ul class="list-unstyled d-flex flex-column gap-3">
-                        <li><a href="#" class="text-white text-decoration-none">Help Center</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Privacy</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Terms</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Us Column -->
-                <div class="col-lg-3 col-md-6 col-12">
-                    <h5 class="text-white mb-4 fw-medium">Contact Us</h5>
-                    <div class="d-flex flex-column gap-3">
-                        <div class="d-flex align-items-start gap-2">
-                            <i class="fa-solid fa-phone mt-1" style="color: #ffffff;"></i>
-                            <a href="tel:+9779802855356" class="text-white text-decoration-none">+9779802855356</a>
-                        </div>
-                        <div class="d-flex align-items-start gap-2">
-                            <i class="fa-solid fa-envelope mt-1" style="color: #ffffff;"></i>
-                            <a href="mailto:info@projectsayogi.com.np" class="text-white text-decoration-none">info@projectsayogi.com.np</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Download Column -->
-                <div class="col-lg-2 col-md-6 col-12">
-                    <h5 class="text-white mb-4 fw-medium">Download</h5>
-                    <div class="d-flex flex-column gap-3">
-                        <a href="#" class="text-decoration-none">
-                            <img src="images/GooglePlayimg.jpg" alt="Get it on Google Play" class="img-fluid" style="max-width: 140px;">
+                    <div class="d-flex" style="gap: 10px;">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="text-decoration-none">
-                            <img src="images/AppStoreimg.jpg" alt="Download on App Store" class="img-fluid" style="max-width: 140px;">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Bottom Copyright Section -->
-            <div class="row mt-5 pt-4 border-top border-white border-opacity-25">
-                <div class="col-lg-6 col-12 text-center text-lg-start mb-3 mb-lg-0">
-                    <p class="mb-0 text-white">Copyright@2025- TukiSoft</p>
-                </div>
-                <div class="col-lg-6 col-12 text-center text-lg-end">
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-end gap-2">
-                        <span class="text-white">Powered By:</span>
-                        <img src="images/tuki logo 1.jpg" alt="TUKI" class="img-fluid" style="max-height: 30px;">
-                    </div>
-                </div>
+            <!-- Quick Link Column -->
+            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 ms-lg-5"> <!-- ms-lg-5 adds left margin = ~20px * 5 = 100px, adjust as needed -->
+                <h5 class="fw-semibold mb-3 pb-2 border-bottom border-white border-2" style="width: fit-content;">Quick Link</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="#" class="text-white text-decoration-none">Home</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-white text-decoration-none">About Us</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-white text-decoration-none">Pricing</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-white text-decoration-none">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Us Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 ms-lg-5"> <!-- ms-lg-5 adds left margin -->
+                <h5 class="fw-semibold mb-3 pb-2 border-bottom border-white border-2" style="width: fit-content;">Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="fas fa-map-marker-alt me-2 mt-1"></i>
+                        <span>Sundarmarga-9, Pokhara</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="mailto:info@projectsayogilite.com.np" class="text-white text-decoration-none">info@projectsayogilite.com.np</a>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-phone-alt me-2"></i>
+                        <a href="tel:+9779802855356" class="text-white text-decoration-none">+9779802855356</a>
+                    </li>
+                </ul>
+            </div>
+
+<!-- Download App Column -->
+<div class="col-lg-2 col-md-6 mb-4 mb-lg-0 ms-lg-5">
+    <h5 class="fw-semibold mb-3 pb-2 border-bottom border-white border-2" style="width: fit-content;">Download App</h5>
+    <div class="d-flex flex-column gap-3">
+        <!-- Google Play Badge -->
+        <a href="#" class="text-decoration-none">
+            <img 
+                src="images/google footer download button .jpg"
+                alt="Get it on Google Play"
+                width="151"
+                height="40"
+                class="rounded-2 border border-secondary"
+            >
+        </a>
+
+        <!-- App Store Badge -->
+        <a href="#" class="text-decoration-none">
+            <img 
+                src="images/Apple footer Store download button .jpg"
+                alt="Download on the App Store"
+                width="151"
+                height="40"
+                class="rounded-2 border border-secondary"
+            >
+        </a>
+    </div>
+</div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="row mt-5 pt-4 border-top border-secondary">
+            <div class="col-12 text-center">
+                <p class="mb-0 text-white-50">
+                    <i class="far fa-copyright"></i> 2025. ProjectSayogi Lite. All Rights Reserved. | Powered by Tuki Soft
+                </p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
+
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 </body>

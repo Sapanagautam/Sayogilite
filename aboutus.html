@@ -149,238 +149,291 @@ navbarToggler.innerHTML = '<i class="fa-solid fa-xmark"></ i>';
     </script>
 
 
-    <!-- Hero Section -->
-    <section class="position-relative about-hero-section pt-5" style="height: 683px; margin-top: 30px;">
-      <img
-        src="images/aboutus.jpg"
-        class="w-100 h-100"
-        alt="About SayogiLite Hero"
-      >
-    </section>
+    <!-- About Hero + Info Section -->
+<section class="position-relative pt-5 pb-2" style="margin-top: 30px;">
+  <!-- Hero Image -->
+  <div class="about-hero-image" style="height: 683px;">
+    <img
+      src="images/aboutus.jpg"
+      alt="About SayogiLite Hero"
+      class="img-fluid w-100 h-100"
+      style="object-fit: cover;"
+    />
+  </div>
 
-    <!-- Light Cyan Info Container -->
-    <div
-      class="position-relative mx-auto about-cyan-container"
-      style="
-        margin-top: -110px;
-        max-width: 1170px;
-        background-color: var(--bg-light-cyan);
-        border-radius: 20px 20px 0 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.12);
-        box-shadow: 0 -10px 40px 1px rgba(0, 0, 0, 0.25);
-        z-index: 10;
-      "
-    >
-      <div class="container py-5 d-flex flex-column align-items-center">
-        <!-- Feature Cards -->
-        <div class="d-flex flex-wrap justify-content-center gap-3 w-100 mb-4">
-          <!-- Card 1 -->
-          <div class="d-flex align-items-start bg-white rounded shadow-sm p-3" style="width: 268px;">
-            <div
-              class="me-3 d-flex align-items-center justify-content-center"
-              style="width: 24px; height: 24px; background-color: rgba(26, 177, 137, 0.2); border-radius: 8px;"
-            >
-              <i class="fas fa-users" style="font-size: 14px; color: var(--bs-primary);"></i>
-            </div>
-            <div>
-              <h5 class="mb-1" style="font-size: 14px; font-weight: 400; color: var(--text-dark);">
-                Manage Construction Sites
-              </h5>
-              <p class="mb-0" style="font-size: 12px; color: var(--text-secondary-color);">
-                Create sites, add parties, and control project operations efficiently.
-              </p>
-            </div>
+  <!-- Light Cyan Info Container -->
+  <div
+    class="position-relative mx-auto"
+    style="
+      margin-top: -60px;
+      max-width: 1000px;
+      background-color: var(--bg-light-cyan);
+      border-radius: 20px 20px 0 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 -10px 40px 1px rgba(0, 0, 0, 0.25);
+      z-index: 5;
+    "
+  >
+    <div class="container py-5 d-flex flex-column align-items-center">
+
+      <!-- Feature Cards -->
+      <div class="d-flex flex-wrap justify-content-center gap-3 w-100 mb-4">
+
+        <!-- Card 1 -->
+        <div class="d-flex align-items-start bg-white rounded shadow-sm p-3" style="width: 268px;">
+          <div
+            class="me-3 d-flex align-items-center justify-content-center"
+            style="width: 32px; height: 32px; background-color: rgba(26, 177, 137, 0.2); border-radius: 8px;"
+          >
+            <i class="fa-solid fa-user" style="font-size: 14px; color: var(--bs-primary);"></i>
           </div>
-
-          <!-- Card 2 -->
-          <div class="d-flex align-items-start bg-white rounded shadow-sm p-3" style="width: 268px;">
-            <div
-              class="me-3 d-flex align-items-center justify-content-center"
-              style="width: 24px; height: 24px; background-color: rgba(26, 177, 137, 0.2); border-radius: 8px;"
-            >
-              <i class="fas fa-chart-line" style="font-size: 14px; color: var(--bs-primary);"></i>
-            </div>
-            <div>
-              <h5 class="mb-1" style="font-size: 14px; font-weight: 400; color: var(--text-dark);">
-                Track Money Flow
-              </h5>
-              <p class="mb-0" style="font-size: 12px; color: var(--text-secondary-color);">
-                Monitor income, expenses, and transactions accurately.
-              </p>
-            </div>
+          <div>
+            <h5 class="mb-1" style="font-size: 14px; font-weight: 400;">
+              Manage Construction Sites
+            </h5>
+            <p class="mb-0" style="font-size: 12px; color: var(--text-secondary-color);">
+              Create sites, add parties, and control project operations efficiently.
+            </p>
           </div>
         </div>
 
-        <!-- Mission Text -->
-        <p
-          class="text-center mb-4"
-          style="max-width: 775px; font-size: 16px; color: var(--text-dark); line-height: 1.5; letter-spacing: 0.02em;"
-        >
-          Our mission is to make construction management simple, organized, and efficient for everyone.
-          From tracking site expenses and income to managing parties, transactions, and reports,
-          Sayogilite gives you the tools to run your projects smoothly.
-        </p>
+        <!-- Card 2 -->
+        <div class="d-flex align-items-start bg-white rounded shadow-sm p-3" style="width: 268px;">
+          <div
+            class="me-3 d-flex align-items-center justify-content-center"
+            style="width: 32px; height: 32px; background-color: rgba(26, 177, 137, 0.2); border-radius: 8px;"
+          >
+            <i class="fa-solid fa-chart-line" style="font-size: 14px; color: var(--bs-primary);"></i>
+          </div>
+          <div>
+            <h5 class="mb-1" style="font-size: 14px; font-weight: 400;">
+              Track Money Flow
+            </h5>
+            <p class="mb-0" style="font-size: 12px; color: var(--text-secondary-color);">
+              Monitor income, expenses, and transactions accurately.
+            </p>
+          </div>
+        </div>
 
-        <!-- Download Button -->
-        <button
-          class="btn d-inline-flex align-items-center gap-2 px-4 py-2"
-          style="background-color: var(--bs-primary); border-color: var(--bs-primary); color: white; font-size: 20px; font-weight: 400; border-radius: 4px;"
-        >
-          <i class="fas fa-download" style="font-size: 18px;"></i>
-          Download App
-        </button>
       </div>
+
+      <!-- Mission Text -->
+      <p
+        class="text-center mb-4"
+        style="max-width: 775px; font-size: 16px; line-height: 1.5;"
+      >
+        Our mission is to make construction management simple, organized, and efficient for everyone.
+        From tracking site expenses and income to managing parties, transactions, and reports,
+        Sayogilite gives you the tools to run your projects smoothly.
+      </p>
+
+      <!-- Download Button -->
+     <button
+  class="btn bg-primary text-white d-inline-flex align-items-center gap-2 px-4 py-2"
+  style="font-size: 20px; font-family: 'Poppins', sans-serif; font-weight: 400; border-radius: 4px;"
+>
+<i class="fa-solid fa-download"></i>  Download App
+</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- Everything You Need Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-semibold text-dark-custom">Why Choose <span class="text-primary">SayogiLite ?</span></h2>
+      <p class="fs-5 text-muted mx-auto" style="max-width: 643px;">
+Powerful features designed to simplify your financial journey      </p>
     </div>
 
-
-
-    <!-- Footer Section -->
-    <footer class="bg-info text-white py-5 px-3 px-md-5">
-      <div class="container">
-        <div class="row g-4">
-          <!-- Logo and Social Links Column -->
-          <div class="col-lg-3 col-md-6 col-12">
-            <div class="d-flex flex-column h-100">
-              <!-- Logo -->
-              <div class="mb-4">
-                <img
-                  src="images/project sayogi 1.jpg"
-                  alt="ProjectSayogi"
-                  class="img-fluid"
-                  style="max-width: 132px; height: auto"
-                />
-              </div>
-
-              <!-- Social Icons -->
-              <div class="social-icons mt-2">
-                <a href="#" class="social-icon" aria-label="Facebook">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-icon" aria-label="Twitter">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-icon" aria-label="Instagram">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social-icon" aria-label="LinkedIn">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </div>
-            </div>
+    <div class="row g-4">
+      <!-- Feature Card 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 rounded-3 p-4 bg-white shadow-sm">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: var(--primary-light);">
+            <i class="fa-regular fa-building text-primary" style="font-size: 27px;"></i>
           </div>
-
-          <div class="col-lg-2 col-md-6 col-6">
-            <h5 class="text-white mb-4 fw-medium">Quick Link</h5>
-            <ul class="list-unstyled d-flex flex-column gap-3">
-              <li>
-                <a href="home.html" class="text-white text-decoration-none"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a href="features.html" class="text-white text-decoration-none"
-                  >Features</a
-                >
-              </li>
-              <li>
-                <a href="pricing.html" class="text-white text-decoration-none"
-                  >Pricing</a
-                >
-              </li>
-              <li>
-                <a href="aboutus.html" class="text-white text-decoration-none"
-                  >About Us</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Support Column -->
-          <div class="col-lg-2 col-md-6 col-6">
-            <h5 class="text-white mb-4 fw-medium">Support</h5>
-            <ul class="list-unstyled d-flex flex-column gap-3">
-              <li>
-                <a href="#" class="text-white text-decoration-none"
-                  >Help Center</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-white text-decoration-none">Privacy</a>
-              </li>
-              <li>
-                <a href="#" class="text-white text-decoration-none">Terms</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contact Us Column -->
-          <div class="col-lg-3 col-md-6 col-12">
-            <h5 class="text-white mb-4 fw-medium">Contact Us</h5>
-            <div class="d-flex flex-column gap-3">
-              <div class="d-flex align-items-start gap-2">
-                <i class="fa-solid fa-phone mt-1" style="color: #ffffff"></i>
-                <a
-                  href="tel:+9779802855356"
-                  class="text-white text-decoration-none"
-                  >+9779802855356</a
-                >
-              </div>
-              <div class="d-flex align-items-start gap-2">
-                <i class="fa-solid fa-envelope mt-1" style="color: #ffffff"></i>
-                <a
-                  href="mailto:info@projectsayogi.com.np"
-                  class="text-white text-decoration-none"
-                  >info@projectsayogi.com.np</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Download Column -->
-          <div class="col-lg-2 col-md-6 col-12">
-            <h5 class="text-white mb-4 fw-medium">Download</h5>
-            <div class="d-flex flex-column gap-3">
-              <a href="#" class="text-decoration-none">
-                <img
-                  src="images/GooglePlayimg.jpg"
-                  alt="Get it on Google Play"
-                  class="img-fluid"
-                  style="max-width: 140px"
-                />
-              </a>
-              <a href="#" class="text-decoration-none">
-                <img
-                  src="images/AppStoreimg.jpg"
-                  alt="Download on App Store"
-                  class="img-fluid"
-                  style="max-width: 140px"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom Copyright Section -->
-        <div class="row mt-5 pt-4 border-top border-white border-opacity-25">
-          <div class="col-lg-6 col-12 text-center text-lg-start mb-3 mb-lg-0">
-            <p class="mb-0 text-white">Copyright@2025- TukiSoft</p>
-          </div>
-          <div class="col-lg-6 col-12 text-center text-lg-end">
-            <div
-              class="d-flex align-items-center justify-content-center justify-content-lg-end gap-2"
-            >
-              <span class="text-white">Powered By:</span>
-              <img
-                src="images/tuki logo 1.jpg"
-                alt="TUKI"
-                class="img-fluid"
-                style="max-height: 30px"
-              />
-            </div>
-          </div>
+          <h5 class="fw-bold mb-2">Site Creation</h5>
+          <p class="text-muted mb-0 fs-6">
+            Create and setup new construction sites with detailed project information and specifications.
+          </p>
         </div>
       </div>
-    </footer>
+
+      <!-- Feature Card 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 rounded-3 p-4 bg-white shadow-sm">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: var(--bg-light-cyan);">
+            <i class="fa-solid fa-wallet text-info" style="font-size: 27px;"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Financial Management</h5>
+          <p class="text-muted mb-0 fs-6">
+            Manage project finances, expenses, and budgets with real-time tracking and reporting.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 rounded-3 p-4 bg-white shadow-sm">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: var(--primary-light);">
+            <i class="fa-solid fa-chart-line text-primary" style="font-size: 27px;"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Rate Setting</h5>
+          <p class="text-muted mb-0 fs-6">
+            Set accurate rates for materials, labor, and services to maintain cost transparency.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card 4 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 rounded-3 p-4 bg-white shadow-sm">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: var(--bg-light-cyan);">
+            <i class="fa-solid fa-users text-info" style="font-size: 27px;"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Party Management</h5>
+          <p class="text-muted mb-0 fs-6">
+            Manage contractors, suppliers, clients, and other stakeholders in one centralized system.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card 5 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 rounded-3 p-4 bg-white shadow-sm">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: var(--primary-light);">
+            <i class="fa-solid fa-boxes-stacked text-primary" style="font-size: 27px;"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Resource Management</h5>
+          <p class="text-muted mb-0 fs-6">
+            Manage materials, labor, and equipment efficiently across all construction sites.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card 6 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 rounded-3 p-4 bg-white shadow-sm">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: var(--bg-light-cyan);">
+            <i class="fa-solid fa-file-lines text-info" style="font-size: 27px;"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Report Generation</h5>
+          <p class="text-muted mb-0 fs-6">
+            Generate detailed project, cost, and resource reports instantly for clear insights.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer Section -->
+<footer class="text-white py-5" style="background-color: var(--bg-sayogi-dark);">
+    <div class="container">
+        <div class="row g-0"> <!-- g-0 for no default gap -->
+            <!-- Logo and Social Icons Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="d-flex flex-column h-100">
+                    <div class="mb-0">
+                        <img src="images/Sayogilitelogo.jpg" alt="Project Sayogi Lite Logo" class="img-fluid" style="max-width: 200px;">
+                    </div>
+                    <div class="d-flex" style="gap: 10px;">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Link Column -->
+            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 ms-lg-5"> <!-- ms-lg-5 adds left margin = ~20px * 5 = 100px, adjust as needed -->
+                <h5 class="fw-semibold mb-3 pb-2 border-bottom border-white border-2" style="width: fit-content;">Quick Link</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="#" class="text-white text-decoration-none">Home</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-white text-decoration-none">About Us</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-white text-decoration-none">Pricing</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-white text-decoration-none">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Us Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 ms-lg-5"> <!-- ms-lg-5 adds left margin -->
+                <h5 class="fw-semibold mb-3 pb-2 border-bottom border-white border-2" style="width: fit-content;">Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="fas fa-map-marker-alt me-2 mt-1"></i>
+                        <span>Sundarmarga-9, Pokhara</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="mailto:info@projectsayogilite.com.np" class="text-white text-decoration-none">info@projectsayogilite.com.np</a>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-phone-alt me-2"></i>
+                        <a href="tel:+9779802855356" class="text-white text-decoration-none">+9779802855356</a>
+                    </li>
+                </ul>
+            </div>
+
+<!-- Download App Column -->
+<div class="col-lg-2 col-md-6 mb-4 mb-lg-0 ms-lg-5">
+    <h5 class="fw-semibold mb-3 pb-2 border-bottom border-white border-2" style="width: fit-content;">Download App</h5>
+    <div class="d-flex flex-column gap-3">
+        <!-- Google Play Badge -->
+        <a href="#" class="text-decoration-none">
+            <img 
+                src="images/google footer download button .jpg"
+                alt="Get it on Google Play"
+                width="151"
+                height="40"
+                class="rounded-2 border border-secondary"
+            >
+        </a>
+
+        <!-- App Store Badge -->
+        <a href="#" class="text-decoration-none">
+            <img 
+                src="images/Apple footer Store download button .jpg"
+                alt="Download on the App Store"
+                width="151"
+                height="40"
+                class="rounded-2 border border-secondary"
+            >
+        </a>
+    </div>
+</div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="row mt-5 pt-4 border-top border-secondary">
+            <div class="col-12 text-center">
+                <p class="mb-0 text-white-50">
+                    <i class="far fa-copyright"></i> 2025. ProjectSayogi Lite. All Rights Reserved. | Powered by Tuki Soft
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
