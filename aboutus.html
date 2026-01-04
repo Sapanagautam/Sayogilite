@@ -139,7 +139,7 @@
     const navbarCollapse = document.getElementById('navbarNav');
     
     navbarCollapse.addEventListener('show.bs.collapse', function () {
-navbarToggler.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+navbarToggler.innerHTML = '<i class="fa-solid fa-xmark"></ i>';
     });
     
     navbarCollapse.addEventListener('hide.bs.collapse', function () {
@@ -147,65 +147,93 @@ navbarToggler.innerHTML = '<i class="fa-solid fa-xmark"></i>';
     });
   });
     </script>
-    <!-- About Sayogilite Section -->
-    <section class="container-fluid py-5 bg-white">
-      <div class="container" style="padding-top: 86px; padding-bottom: 60px">
-        <div class="row align-items-center g-4">
-          <!-- Left Column - Image -->
-          <div class="col-lg-5 col-md-6">
-            <div class="position-relative">
-              <div class="max-width: 505px;">
-                <!-- Phone Mockup Image Placeholder -->
-                <img
-                  src="images/aboutus.jpg"
-                  alt="SayogiLite App"
-                  class="img-fluid rounded-3 shadow-sm"
-                  style="max-width: 100%; height: auto"
-                />
-              </div>
+
+
+    <!-- Hero Section -->
+    <section class="position-relative about-hero-section pt-5" style="height: 683px; margin-top: 30px;">
+      <img
+        src="images/aboutus.jpg"
+        class="w-100 h-100"
+        alt="About SayogiLite Hero"
+      >
+    </section>
+
+    <!-- Light Cyan Info Container -->
+    <div
+      class="position-relative mx-auto about-cyan-container"
+      style="
+        margin-top: -110px;
+        max-width: 1170px;
+        background-color: var(--bg-light-cyan);
+        border-radius: 20px 20px 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 -10px 40px 1px rgba(0, 0, 0, 0.25);
+        z-index: 10;
+      "
+    >
+      <div class="container py-5 d-flex flex-column align-items-center">
+        <!-- Feature Cards -->
+        <div class="d-flex flex-wrap justify-content-center gap-3 w-100 mb-4">
+          <!-- Card 1 -->
+          <div class="d-flex align-items-start bg-white rounded shadow-sm p-3" style="width: 268px;">
+            <div
+              class="me-3 d-flex align-items-center justify-content-center"
+              style="width: 24px; height: 24px; background-color: rgba(26, 177, 137, 0.2); border-radius: 8px;"
+            >
+              <i class="fas fa-users" style="font-size: 14px; color: var(--bs-primary);"></i>
+            </div>
+            <div>
+              <h5 class="mb-1" style="font-size: 14px; font-weight: 400; color: var(--text-dark);">
+                Manage Construction Sites
+              </h5>
+              <p class="mb-0" style="font-size: 12px; color: var(--text-secondary-color);">
+                Create sites, add parties, and control project operations efficiently.
+              </p>
             </div>
           </div>
 
-          <!-- Right Column - Content -->
-          <div class="col-lg-7 col-md-6">
-            <div class="ps-lg-5">
-              <h2
-                class="fw-semibold mb-4"
-                style="
-                  font-family: 'Poppins', sans-serif;
-                  font-size: 34px;
-                  line-height: 51px;
-                  letter-spacing: 0.68px;
-                "
-              >
-                About Sayogilite
-              </h2>
-              <p
-                class="fw-normal"
-                style="
-                  font-family: 'Poppins', sans-serif;
-                  font-size: 20px;
-                  line-height: 30px;
-                  letter-spacing: 0.01em;
-                "
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                dolorum, corrupti, molestias qui recusandae blanditiis placeat
-                error molestiae omnis sequi impedit doloremque earum soluta
-                excepturi dolorem dicta tempora labore inventore amet iure
-                veritatis vel. Ipsa, adipisci cupiditate. Numquam modi veritatis
-                molestiae, voluptatem alias voluptatibus excepturi eos
-                perspiciatis maiores iusto tempora enim vel laborum placeat
-                consequatur eligendi quam. Facere numquam rem quisquam pariatur
-                voluptatum quia, non molestiae? Placeat labore, omnis in vitae
-                deleniti at ut, architecto sapiente ea laudantium accusamus
-                voluptate?
+          <!-- Card 2 -->
+          <div class="d-flex align-items-start bg-white rounded shadow-sm p-3" style="width: 268px;">
+            <div
+              class="me-3 d-flex align-items-center justify-content-center"
+              style="width: 24px; height: 24px; background-color: rgba(26, 177, 137, 0.2); border-radius: 8px;"
+            >
+              <i class="fas fa-chart-line" style="font-size: 14px; color: var(--bs-primary);"></i>
+            </div>
+            <div>
+              <h5 class="mb-1" style="font-size: 14px; font-weight: 400; color: var(--text-dark);">
+                Track Money Flow
+              </h5>
+              <p class="mb-0" style="font-size: 12px; color: var(--text-secondary-color);">
+                Monitor income, expenses, and transactions accurately.
               </p>
             </div>
           </div>
         </div>
+
+        <!-- Mission Text -->
+        <p
+          class="text-center mb-4"
+          style="max-width: 775px; font-size: 16px; color: var(--text-dark); line-height: 1.5; letter-spacing: 0.02em;"
+        >
+          Our mission is to make construction management simple, organized, and efficient for everyone.
+          From tracking site expenses and income to managing parties, transactions, and reports,
+          Sayogilite gives you the tools to run your projects smoothly.
+        </p>
+
+        <!-- Download Button -->
+        <button
+          class="btn d-inline-flex align-items-center gap-2 px-4 py-2"
+          style="background-color: var(--bs-primary); border-color: var(--bs-primary); color: white; font-size: 20px; font-weight: 400; border-radius: 4px;"
+        >
+          <i class="fas fa-download" style="font-size: 18px;"></i>
+          Download App
+        </button>
       </div>
-    </section>
+    </div>
+
+
+
     <!-- Footer Section -->
     <footer class="bg-info text-white py-5 px-3 px-md-5">
       <div class="container">

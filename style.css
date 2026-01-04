@@ -15,9 +15,28 @@
         --bg-light-cyan: #D5F2F0;
         --text-dark: #222222;
           --primary-hover: #128B6B;
+  --bg-sayogi-dark: #102D41;       
+  --bg-icon-light: #D8E8F5;        
+  --card-bg: rgba(83, 35, 226, 0.1);
+ --card-bg-dark-blue: #102D41;
+  --card-bg-dark-blue-soft: rgba(60, 78, 90, 0.85);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --bs-info-bg-subtle: rgba(26, 177, 137, 0.12);
+  --text-primary-color: #1A1A1A;
+  --text-secondary-color: #555555;
+  --link-color: #0A0C5C;
+  --card-bg: #FAFAFA;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-bg-dark-blue-soft: rgba(60, 78, 90, 0.85);
+  --bg-sayogi-dark: #102D41;
 
       }
-
+.bg-bg-sayogi-dark {
+  background-color: var(--bg-sayogi-dark);
+}
+      .bg-primary-dark {
+  background-color: var(--bg-primary-dark);
+}
       .bg-light-cyan {
         background-color: var(--bg-light-cyan);
       }
@@ -35,8 +54,8 @@
       }
 
       .brand-logo-img {
-        width: 92px;
-        height: 76px;
+        width: 86px;
+        height: 65px;
       }
 
       .nav-link {
@@ -280,3 +299,43 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(26, 177, 137, 0.3);
 }
+
+.fa-8px { font-size: 8px !important; }
+
+  /* Ensure hero image stays at top */
+  .about-hero-section img {
+    object-fit: contain !important;
+    object-position: top !important;
+  }
+
+  /* Desktop: keep your original look */
+  @media (min-width: 992px) {
+    .about-hero-section {
+      height: auto !important;
+      min-height: 683px;
+    }
+    .about-cyan-container {
+      margin-top: -110px !important;
+    }
+  }
+
+  /* Tablet: reduce negative margin so it doesn't jump too high */
+  @media (max-width: 991.98px) and (min-width: 768px) {
+    .about-cyan-container {
+      margin-top: -70px !important;
+    }
+  }
+
+  /* Mobile: reduce more, and ensure side gaps */
+  @media (max-width: 767.98px) {
+    .about-cyan-container {
+      margin-top: -50px !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+    .about-hero-section {
+      height: auto !important;
+      min-height: 280px;
+      margin-top: 20px;
+    }
+  }
