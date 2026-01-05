@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SayogiLite - Construction Excellence</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css"
+    />
+     <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body class="bg-light m-0 p-0">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-1">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="home.html">
+          <img
+            src="images/project sayogi 1.jpg"
+            alt="sayogilite"
+            class="brand-logo-img"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto gap-4">
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="features.html">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          
+          <a href="#" class="btn btn-get-started text-white text-decoration-none d-inline-flex align-items-center">
+            Get Started <i class="bi bi-chevron-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Active Nav Link Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get current page filename
+    let currentPage = window.location.pathname.split('/').pop();
+    
+    // Handle root or index
+    if (currentPage === '' || currentPage === 'index.html') {
+      currentPage = 'home.html';
+    }
+    
+    // Get all nav links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    // Remove active class from all links first
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+    
+    // Add active class to current page link
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      const page = link.getAttribute('data-page');
+      
+      if (href === currentPage || currentPage.includes(page)) {
+        link.classList.add('active');
+        // Update aria-current for accessibility
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.getElementById('navbarNav');
+    
+    navbarCollapse.addEventListener('show.bs.collapse', function () {
+navbarToggler.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    });
+    
+    navbarCollapse.addEventListener('hide.bs.collapse', function () {
+      navbarToggler.innerHTML = '<span class="navbar-toggler-icon"></span>';
+    });
+  });
+  </script>
+
+<body class="bg-light">
+
+  <!-- Pricing Section -->
+  <div class="container-fluid py-5 bg-white">
+    <div class="container text-center" style="padding-top: 86px; padding-bottom: 60px;">
+      <h2 class="fw-bold mb-3" style="font-size: 2.5rem;">
+        Flexible <span class="text-primary">Pricing</span> Options
+      </h2>
+      <p class="text-muted mb-5 mx-auto" style="max-width: 700px;">
+        Our pricing adapts to your needs, whether you're just starting out or scaling up.
+        Choose from flexible plans designed to support every stage of your online learning journey.
+      </p>
+
+      <div class="row g-4 justify-content-center border bg-white rounded-4 p-3 p-md-4">
+        <!-- Basic -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 border-0 position-relative">
+            <div class="card-body d-flex flex-column p-4 border-end">
+              <h4 class="fw-bold mb-2 text-start">Basic</h4>
+              <p class="text-start mb-4 small text-muted">Ideal for small learners and educators starting out.</p>
+
+              <div class="mb-4 text-start">
+                <span class="fw-bold fs-4">Rs. 1,000</span>
+                <span class="small text-muted">/month</span>
+              </div>
+
+              <h6 class="text-start fw-bold mb-3 small">What's included</h6>
+              <ul class="list-unstyled text-start mb-4 flex-grow-1 pricing-features">
+                <li class="mb-2"><i class="bi bi-check text-success me-2"></i> Access to 5 courses</li>
+                <li class="mb-2"><i class="bi bi-check text-success me-2"></i> Basic analytics</li>
+                <li class="mb-2 feature-disabled"><i class="bi bi-check text-muted me-2"></i> Custom branding (Rs. 500)</li>
+              </ul>
+
+              <div class="mt-auto">
+                <a href="#" class="btn btn-outline-primary w-100 fw-semibold rounded-3 py-2">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pro -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 border-0 position-relative pricing-card-pro">
+            <span class="badge badge-popular">Most Popular</span>
+            <div class="card-body d-flex flex-column p-4 border-end">
+              <h4 class="fw-bold mb-2 text-start text-white">Pro</h4>
+              <p class="text-start mb-4 small text-white-50">Perfect for growing educators and institutes.</p>
+
+              <div class="mb-4 text-start">
+                <span class="fw-bold fs-4">Rs. 2,500</span>
+                <span class="small text-white-50">/month</span>
+              </div>
+
+              <h6 class="text-start fw-bold mb-3 small text-white">What's included</h6>
+              <ul class="list-unstyled text-start mb-4 flex-grow-1 pricing-features">
+                <li class="mb-2"><i class="bi bi-check text-white me-2"></i> Access to 20 courses</li>
+                <li class="mb-2"><i class="bi bi-check text-white me-2"></i> Advanced analytics</li>
+                <li class="mb-2"><i class="bi bi-check text-white me-2"></i> Custom branding</li>
+              </ul>
+
+              <div class="mt-auto">
+                <a href="#" class="btn btn-light text-primary w-100 fw-semibold rounded-3 py-2">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 border-0 position-relative">
+            <div class="card-body d-flex flex-column p-4">
+              <h4 class="fw-bold mb-2 text-start">Enterprise</h4>
+              <p class="text-start mb-4 small text-muted">For large institutions needing tailored solutions.</p>
+
+              <div class="mb-3 text-start">
+                <p class="fw-bold mb-1 small">Need More?</p>
+                <p class="small mb-0 text-muted">Request us <a href="#" class="text-primary">here</a>.</p>
+              </div>
+
+              <div class="mb-4 text-start">
+                <span class="fw-bold fs-4">Rs. 5,000</span>
+                <span class="small text-muted">/month</span>
+              </div>
+
+              <h6 class="text-start fw-bold mb-3 small">What's included</h6>
+              <ul class="list-unstyled text-start mb-4 flex-grow-1 pricing-features">
+                <li class="mb-2"><i class="bi bi-check text-success me-2"></i> Unlimited courses</li>
+                <li class="mb-2"><i class="bi bi-check text-success me-2"></i> Dedicated support</li>
+                <li class="mb-2"><i class="bi bi-check text-success me-2"></i> Custom integrations</li>
+              </ul>
+
+              <div class="mt-auto">
+                <a href="contact.html" class="btn btn-outline-primary w-100 fw-semibold rounded-3 py-2">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <!-- Bootstrap + JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const basicRequirementInputs = document.querySelectorAll('.basic-requirement-input');
+      const featureToggles = document.querySelectorAll('.feature-toggle');
+      const priceSummaryList = document.getElementById('price-summary-list');
+      const totalPriceElement = document.getElementById('total-price');
+      const currency = 'Rs';
+
+      function formatPrice(price) {
+        return new Intl.NumberFormat('en-US', {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0
+        }).format(price);
+      }
+
+      function calculateTotalPrice() {
+        let totalCost = 0;
+        let summaryHtml = '';
+
+        basicRequirementInputs.forEach(input => {
+          const count = parseInt(input.value) || 0;
+          const name = input.dataset.name;
+          const pricePerUnit = parseFloat(input.dataset.pricePerStudent);
+          const discount = parseFloat(input.dataset.discount);
+          const discountIfCount = parseInt(input.dataset.discountIfCount);
+
+          if (count > 0 && pricePerUnit > 0) {
+            let itemCost = count * pricePerUnit;
+            let lineItemText = `${name} (${count}*${formatPrice(pricePerUnit)})`;
+
+            if (discountIfCount > 0 && count >= discountIfCount && discount > 0) {
+              const discountAmount = (itemCost * discount) / 100;
+              itemCost -= discountAmount;
+              lineItemText += ` - ${discount}% discount`;
+            }
+
+            totalCost += itemCost;
+            summaryHtml += `
+              <p class="d-flex justify-content-between mb-1">
+                <small>${lineItemText}</small>
+                <span class="fw-bold">${currency} ${formatPrice(itemCost)}</span>
+              </p>
+            `;
+          }
+        });
+
+        summaryHtml += `<hr class="my-3">`;
+
+        featureToggles.forEach(toggle => {
+          if (toggle.checked) {
+            const featureName = toggle.dataset.featureName;
+            const featurePrice = parseFloat(toggle.dataset.featurePrice);
+            totalCost += featurePrice;
+            summaryHtml += `
+              <p class="d-flex justify-content-between mb-1">
+                <small>${featureName}</small>
+                <span class="fw-bold">${currency} ${formatPrice(featurePrice)}</span>
+              </p>
+            `;
+          }
+        });
+
+        priceSummaryList.innerHTML = summaryHtml;
+        totalPriceElement.textContent = formatPrice(totalCost);
+      }
+
+      basicRequirementInputs.forEach(input => input.addEventListener('input', calculateTotalPrice));
+      featureToggles.forEach(toggle => toggle.addEventListener('change', calculateTotalPrice));
+
+      calculateTotalPrice();
+    });
+  </script>
+
+  <!-- Footer Section -->
+<footer class="text-white py-5" style="background-color: var(--bg-sayogi-dark);">
+    <div class="container">
+        <div class="row g-0"> <!-- g-0 for no default gap -->
+            <!-- Logo and Social Icons Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="d-flex flex-column h-100">
+                    <div class="mb-0">
+                        <img src="images/Sayogilitelogo.jpg" alt="Project Sayogi Lite Logo" class="img-fluid" style="max-width: 200px;">
+                    </div>
+                    <div class="d-flex" style="gap: 10px;">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Link Column -->
+            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 ms-lg-5"> <!-- ms-lg-5 adds left margin = ~20px * 5 = 100px, adjust as needed -->
+                <h5 class="fw-semibold mb-3 pb-2 border-bottom border-white border-2" style="width: fit-content;">Quick Link</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="#" class="text-white text-decoration-none">Home</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-white text-decoration-none">About Us</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-white text-decoration-none">Pricing</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-white text-decoration-none">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Us Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 ms-lg-5"> <!-- ms-lg-5 adds left margin -->
+                <h5 class="fw-semibold mb-3 pb-2 border-bottom border-white border-2" style="width: fit-content;">Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="fas fa-map-marker-alt me-2 mt-1"></i>
+                        <span>Sundarmarga-9, Pokhara</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="mailto:info@projectsayogilite.com.np" class="text-white text-decoration-none">info@projectsayogilite.com.np</a>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-phone-alt me-2"></i>
+                        <a href="tel:+9779802855356" class="text-white text-decoration-none">+9779802855356</a>
+                    </li>
+                </ul>
+            </div>
+
+<!-- Download App Column -->
+<div class="col-lg-2 col-md-6 mb-4 mb-lg-0 ms-lg-5">
+    <h5 class="fw-semibold mb-3 pb-2 border-bottom border-white border-2" style="width: fit-content;">Download App</h5>
+    <div class="d-flex flex-column gap-3">
+        <!-- Google Play Badge -->
+        <a href="#" class="text-decoration-none">
+            <img 
+                src="images/google footer download button .jpg"
+                alt="Get it on Google Play"
+                width="151"
+                height="40"
+                class="rounded-2 border border-secondary"
+            >
+        </a>
+
+        <!-- App Store Badge -->
+        <a href="#" class="text-decoration-none">
+            <img 
+                src="images/Apple footer Store download button .jpg"
+                alt="Download on the App Store"
+                width="151"
+                height="40"
+                class="rounded-2 border border-secondary"
+            >
+        </a>
+    </div>
+</div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="row mt-5 pt-4 border-top border-secondary">
+            <div class="col-12 text-center">
+                <p class="mb-0 text-white-50">
+                    <i class="far fa-copyright"></i> 2025. ProjectSayogi Lite. All Rights Reserved. | Powered by Tuki Soft
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>
