@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SayogiLite - Construction Excellence</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+
+   
+  </head>
+  <body class="bg-light m-0 p-0">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-1" >
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="home.html">
+          <img
+            src="images/Sayogilitelogo1.jpg"
+            alt="sayogilite"
+            class="brand-logo-img"
+
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto gap-4">
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="aboutus.html">About Us</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="contact.html">Contact Us</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link text-secondary p-0 fw-medium fs-6" style="line-height: 28px; height: 28px;" href="blogs.html">Blogs</a>
+            </li>
+          </ul>
+          
+          <a href="#" class="btn btn-get-started text-white text-decoration-none d-inline-flex align-items-center">
+            Get Started <i class="bi bi-chevron-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    
+<!-- Active Nav Link Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get current page filename
+    let currentPage = window.location.pathname.split('/').pop();
+    
+    // Handle root or index
+    if (currentPage === '' || currentPage === 'index.html') {
+      currentPage = 'home.html';
+    }
+    
+    // Get all nav links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    // Remove active class from all links first
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+    
+    // Add active class to current page link
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      const page = link.getAttribute('data-page');
+      
+      if (href === currentPage || currentPage.includes(page)) {
+        link.classList.add('active');
+        // Update aria-current for accessibility
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+
+    // Toggle between hamburger and X icon
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.getElementById('navbarNav');
+    
+    navbarCollapse.addEventListener('show.bs.collapse', function () {
+navbarToggler.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    });
+    
+    navbarCollapse.addEventListener('hide.bs.collapse', function () {
+      navbarToggler.innerHTML = '<span class="navbar-toggler-icon"></span>';
+    });
+  });
+</script>
+    
+
+
+    <!-- Hero Section -->
+    <section class="bg-white overflow-hidden" style="margin-top: 70px;">
+      <div class="container" style="padding-top: 70px; padding-bottom: 86px;">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+            <div style="max-width: 698px;">
+              <div style="max-width: 640px;">
+                <h1 class="m-0 p-0 text-dark" style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 50px; line-height: 60px; letter-spacing: 0.03em;">
+                  Manage Construction<br>Projects with<br><span class="text-primary">SayogiLite</span>
+                </h1>
+              </div>
+              
+              <div style="max-width: 656px; margin-top: 20px;">
+                <p class="m-0 p-0 text-secondary" style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 20px; line-height: 30px; letter-spacing: 0.01em;">
+                  Complete construction management solution to manage sites, resources, finances, and parties all in one powerful platform.
+                </p>
+              </div>
+              
+              <div class="d-flex gap-3 flex-wrap" style="max-width: 442px; margin-top: 30px;">
+                <a href="#" class="btn bg-primary text-white text-decoration-none d-inline-flex align-items-center justify-content-center" style="width: 211px; height: 50px; border-radius: 4px; font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 20px;">
+                  Download App
+                </a>
+                <a href="#" class="btn text-decoration-none d-inline-flex align-items-center justify-content-center border-primary text-primary" style="background-color: transparent; width: 211px; height: 50px; border-radius: 4px; font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 20px;">
+                  Learn more
+                </a>
+              </div>
+
+              <div class="mt-4">
+    <img 
+      src="images/badge.png" 
+      alt="Free to start | No credit card" 
+      width="280" 
+      height="24"
+      class="img-fluid"
+    >
+  </div>
+            </div>
+          </div>
+
+        <div class="col-lg-6 col-12 d-flex justify-content-center justify-content-lg-end">
+<div class="position-relative" style="max-width: 665px;">
+  <img 
+    src="images/home .png" 
+    alt="Construction workers reviewing blueprints" 
+    class="w-100 img-fluid"
+  >
+</div>
+
+</div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- Discover Project Sayogi Section -->
+<section class="py-5" style="background-color: var(--card-bg-dark-blue);">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Content Column -->
+      <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+        <div style="max-width: 534px;">
+          
+          <!-- Badge -->
+          <div class="mb-3">
+            <div class="d-inline-flex align-items-center px-3 py-1 rounded-pill text-white bg-info-subtle" style="height: 28px;">
+              <i class="fa-solid fa-circle me-2 text-primary" style="font-size: 8px;"></i>
+              <span class="fw-normal" style="font-size: 16px; line-height: 24px;">
+                Part of a Bigger Ecosystem
+              </span>
+            </div>
+          </div>
+
+          <!-- Heading -->
+          <h2 class="mb-3 text-white" style="font-weight: 500; font-size: 40px; line-height: 60px;">
+            Discover <span class="text-primary">Project Sayogi</span>
+          </h2>
+
+          <!-- Description -->
+          <p class="mb-4 text-white-50" style="font-weight: 400; font-size: 16px; line-height: 24px;">
+            SayogiLite is part of the larger Project Sayogi ecosystem — a comprehensive construction management platform designed for enterprises and large-scale operations. Get access to advanced features, unlimited projects, and dedicated support.
+          </p>
+
+          <!-- CTA Button -->
+         <a href="https://projectsayogi.com/" class="btn d-inline-flex align-items-center text-white bg-primary px-4 py-2 rounded-3 text-decoration-none gap-2" style="font-size: 20px;">
+  Explore Project Sayogi
+  <i class="fa-solid fa-arrow-right"></i>
+</a>
+        </div>
+      </div>
+
+     <!-- Right Cards Column -->
+<div class="col-lg-6 col-12">
+  <div class="row g-3">
+
+    <!-- Card 1 - Project Management -->
+    <div class="col-12 col-sm-6">
+      <div class="card h-100 border-0 rounded-3 p-3" style="background-color: var(--card-bg-dark-blue-soft); border: 1px solid var(--card-border);">
+        <div class="card-body p-0">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: rgba(var(--bs-primary-rgb), 0.2);">
+            <i class="fa-regular fa-building" style="font-size: 27px; color: var(--bs-primary);"></i>
+          </div>
+          <h5 class="mb-2 text-white" style="font-weight: 500; font-size: 17px; line-height: 28px;">Project Management</h5>
+          <p class="mb-0 text-white-50" style="font-weight: 400; font-size: 14px; line-height: 22px;">
+            Plan, track, and deliver projects efficiently with streamlined workflows and real-time collaboration
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 - Inventory Management -->
+    <div class="col-12 col-sm-6">
+      <div class="card h-100 border-0 rounded-3 p-3" style="background-color: var(--card-bg-dark-blue-soft); border: 1px solid var(--card-border);">
+        <div class="card-body p-0">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: rgba(var(--bs-primary-rgb), 0.2);">
+            <i class="fa-regular fa-clipboard" style="font-size: 27px; color: var(--bs-primary);"></i>
+          </div>
+          <h5 class="mb-2 text-white" style="font-weight: 500; font-size: 17px; line-height: 28px;">Inventory Management</h5>
+          <p class="mb-0 text-white-50" style="font-weight: 400; font-size: 14px; line-height: 22px;">
+            Monitor stock levels, materials, and supplies with accurate, real-time inventory control.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 - Equipment Management -->
+    <div class="col-12 col-sm-6">
+      <div class="card h-100 border-0 rounded-3 p-3" style="background-color: var(--card-bg-dark-blue-soft); border: 1px solid var(--card-border);">
+        <div class="card-body p-0">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: rgba(var(--bs-primary-rgb), 0.2);">
+            <i class="fa-solid fa-screwdriver-wrench" style="font-size: 27px; color: var(--bs-primary);"></i>
+          </div>
+          <h5 class="mb-2 text-white" style="font-weight: 500; font-size: 17px; line-height: 28px;">Equipment Management</h5>
+          <p class="mb-0 text-white-50" style="font-weight: 400; font-size: 14px; line-height: 22px;">
+            Track equipment usage, maintenance, and performance to maximize uptime and reduce operational costs
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 - Human-Resource Management -->
+    <div class="col-12 col-sm-6">
+      <div class="card h-100 border-0 rounded-3 p-3" style="background-color: var(--card-bg-dark-blue-soft); border: 1px solid var(--card-border);">
+        <div class="card-body p-0">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: rgba(var(--bs-primary-rgb), 0.2);">
+            <i class="fa-regular fa-user" style="font-size: 27px; color: var(--bs-primary);"></i>
+          </div>
+          <h5 class="mb-2 text-white" style="font-weight: 500; font-size: 17px; line-height: 28px;">Human-Resource Management</h5>
+          <p class="mb-0 text-white-50" style="font-weight: 400; font-size: 14px; line-height: 22px;">
+            Assign teams, manage workforce schedules, and optimize manpower across all project sites.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Built for Construction Excellence Section -->
+    <section class="bg-light py-4">
+      <div class="container py-5">
+        
+        <div class="text-center mb-5 pb-3">
+          <h2 class="display-5 fw-semibold mb-3">Built for Construction Excellence</h2>
+          <p class="fs-6 text-muted px-lg-1 mx-auto" style="max-width: 1033px;">SayogiLite delivers comprehensive construction management tools designed specifically for modern construction businesses to streamline operations and maximize efficiency.</p>
+        </div>
+
+        <div class="row g-5 mb-5">
+          
+          <div class="col-lg-6">
+            <div class="h-100">
+              <h3 class="fs-3 fw-medium mb-4">Our Mission</h3>
+              <p class="text-muted mb-4">We empower construction businesses with intelligent tools that simplify project management, resource tracking, and financial oversight. SayogiLite was created to bring digital efficiency to the construction industry.</p>
+              
+              <div class="d-flex flex-column gap-4">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 mt-1 circle-indicator">
+                    <div class="rounded-circle circle-indicator-inner"></div>
+                  </div>
+                  <div>
+                    <h5 class="fw-medium mb-1 fs-6">Site Management</h5>
+                    <p class="text-muted mb-0" style="font-size: 14px;">Create and manage multiple construction sites with real-time tracking</p>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-start gap-3">
+                  <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 mt-1 circle-indicator">
+                    <div class="rounded-circle circle-indicator-inner"></div>
+                  </div>
+                  <div>
+                    <h5 class="fw-medium mb-1 fs-6">Resource Control</h5>
+                    <p class="text-muted mb-0" style="font-size: 14px;">Track materials, equipment, and workforce allocation efficiently</p>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-start gap-3">
+                  <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 mt-1 circle-indicator">
+                    <div class="rounded-circle circle-indicator-inner"></div>
+                  </div>
+                  <div>
+                    <h5 class="fw-medium mb-1 fs-6">Financial Transparency</h5>
+                    <p class="text-muted mb-0" style="font-size: 14px;">Complete financial management with secure data protection</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="bg-white border border-1 rounded-3 p-4 h-100 shadow-sm">
+              <h3 class="text-center fw-medium mb-4" style="font-size: 24px;">App Stats</h3>
+              
+              <div class="row g-4 mb-4">
+                <div class="col-6">
+                  <div class="d-flex flex-column">
+                    <span class="fw-semibold mb-1 stat-value">2025</span>
+                    <span style="font-size: 18px;">Founded</span>
+                  </div>
+                </div>
+                
+                <div class="col-6">
+                  <div class="d-flex flex-column">
+                    <span class="fw-semibold mb-1 stat-value">20+</span>
+                    <span style="font-size: 18px;">Team Members</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-4 mb-4 pb-4 border-bottom">
+                <div class="col-6">
+                  <div class="d-flex flex-column">
+                    <span class="fw-semibold mb-1 stat-value">100K+</span>
+                    <span style="font-size: 18px;">Downloads</span>
+                  </div>
+                </div>
+                
+                <div class="col-6">
+                  <div class="d-flex flex-column">
+                    <span class="fw-semibold mb-1 stat-value">50+</span>
+                    <span style="font-size: 18px;">Contractors Onboarded</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-center pt-2">
+                <div class="d-flex align-items-center me-3">
+                  <div class="rounded-circle avatar-circle-dark"></div>
+                  <div class="rounded-circle avatar-circle-light"></div>
+                  <div class="rounded-circle avatar-circle-primary"></div>
+                  <div class="rounded-circle d-flex align-items-center justify-content-center avatar-circle-light">
+                    <i class="fa-solid fa-plus" ></i>
+                  </div>
+                </div>
+                <span style="font-size: 20px; font-weight: 400;">Trusted by thousands</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<!-- Everything You Need Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-semibold text-dark-custom">Everything You Need</h2>
+      <p class="fs-5 text-muted mx-auto" style="max-width: 643px;">
+        Discover the comprehensive features that make Sayogi the ultimate construction management platform.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Feature Card 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 rounded-3 p-4 bg-white shadow-sm">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: var(--primary-light);">
+            <i class="fa-regular fa-building text-primary" style="font-size: 27px;"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Site Creation</h5>
+          <p class="text-muted mb-0 fs-6">
+            Create and setup new construction sites with detailed project information and specifications.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 rounded-3 p-4 bg-white shadow-sm">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: var(--bg-light-cyan);">
+            <i class="fa-solid fa-wallet text-info" style="font-size: 27px;"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Financial Management</h5>
+          <p class="text-muted mb-0 fs-6">
+            Manage project finances, expenses, and budgets with real-time tracking and reporting.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 rounded-3 p-4 bg-white shadow-sm">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: var(--primary-light);">
+            <i class="fa-solid fa-chart-line text-primary" style="font-size: 27px;"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Rate Setting</h5>
+          <p class="text-muted mb-0 fs-6">
+            Set accurate rates for materials, labor, and services to maintain cost transparency.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card 4 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 rounded-3 p-4 bg-white shadow-sm">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: var(--bg-light-cyan);">
+     <i class="fa-solid fa-user-group text-info" style="font-size: 27px;"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Party Management</h5>
+          <p class="text-muted mb-0 fs-6">
+            Manage contractors, suppliers, clients, and other stakeholders in one centralized system.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card 5 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 rounded-3 p-4 bg-white shadow-sm">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: var(--primary-light);">
+            <i class="fa-solid fa-boxes-stacked text-primary" style="font-size: 27px;"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Resource Management</h5>
+          <p class="text-muted mb-0 fs-6">
+            Manage materials, labor, and equipment efficiently across all construction sites.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card 6 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 rounded-3 p-4 bg-white shadow-sm">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 60px; height: 60px; background-color: var(--bg-light-cyan);">
+           <i class="fa-regular fa-file-lines text-info" style="font-size: 27px;"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Report Generation</h5>
+          <p class="text-muted mb-0 fs-6">
+            Generate detailed project, cost, and resource reports instantly for clear insights.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Mobile-First Construction Management Section -->
+<section class="py-5 bg-bg-sayogi-dark">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Column: Text Content -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="fw-bold text-white" style="font-size: 45px; line-height: 1.2;">
+          Mobile-First Construction Management
+        </h2>
+        <p class="text-white mt-3 fs-5" style="line-height: 1.4; text-align: justify;">
+          Built for construction professionals on the move. Access site information, manage resources, and track finances from anywhere on the job site.
+        </p>
+        <div class="mt-4">
+          <p class="text-white fw-medium mb-3 fs-6" style="letter-spacing: 0;">Also available at :</p>
+          <div class="d-flex gap-3">
+            <!-- App Store Button (Card Style) -->
+            <a href="#" class="d-flex flex-column align-items-center justify-content-center p-3 rounded-3 text-decoration-none"
+               style="width: 110px; height: 90px; background-color: var(--card-bg-dark-blue-soft); border: 1px solid var(--card-border);">
+              <img src="images/logos_apple-app-store.jpg" alt="App Store" class="mb-2" style="width: 29px; height: 29px;" />
+              <span class="text-white" style="font-size: 12px; line-height: 100%;">App Store</span>
+            </a>
+
+            <!-- Google Play Button (Card Style) -->
+            <a href="#" class="d-flex flex-column align-items-center justify-content-center p-3 rounded-3 text-decoration-none"
+               style="width: 110px; height: 90px; background-color: var(--card-bg-dark-blue-soft); border: 1px solid var(--card-border);">
+              <img src="images/logos_google-play-icon.jpg" alt="Google Play" class="mb-2" style="width: 29px; height: 29px;" />
+              <span class="text-white" style="font-size: 12px; line-height: 100%;">Google Play</span>
+            </a>
+
+            <!-- Web Browser Button (Card Style) -->
+            <a href="#" class="d-flex flex-column align-items-center justify-content-center p-3 rounded-3 text-decoration-none"
+               style="width: 110px; height: 90px; background-color: var(--card-bg-dark-blue-soft); border: 1px solid var(--card-border);">
+              <img src="images/logos_firefox.jpg" alt="Web Browser" class="mb-2" style="width: 29px; height: 29px;" />
+              <span class="text-white" style="font-size: 12px; white-space: nowrap; line-height: 100%;">Web Browser</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Image -->
+      <div class="col-lg-6 d-flex justify-content-center">
+        <img src="images/sayogilitemobile.jpg" alt="Mobile-First Construction Management App Screens"
+             class="img-fluid"
+             style="width: 674px; height: 445px; " />
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+
+
+
+    
+<!-- Testimonials Section -->
+<section class="bg-white py-5">
+    <div class="container py-5">
+        
+        <!-- Section Header -->
+        <div class="text-center mx-auto mb-5" style="max-width: 805px;">
+            <h2 class="display-5 fw-semibold mb-3">Trusted by Teams Worldwide</h2>
+            <p class="text-muted fs-6">
+                See what our customers say about how Project Sajogi has improved their team productivity and management
+            </p>
+        </div>
+
+        <!-- Testimonial Cards -->
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                <div class="card h-100 border border-1 border-opacity-10 rounded-3 shadow-sm testimonial-card" style="max-width: 400px; min-height: 430px; width: 100%;">
+                    <div class="card-body d-flex flex-column gap-3 p-4">
+
+                        <!-- Header with Avatar and Info -->
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="images/Ellipse 5.jpg" 
+                                 alt="Leo" 
+                                 class="rounded-circle object-fit-cover flex-shrink-0" 
+                                 width="72" 
+                                 height="72">
+
+                            <div class="flex-grow-1">
+                                <h5 class="fw-bold text-dark mb-2 fs-4">Leo</h5>
+                                <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-2 gap-sm-3">
+                                    <p class="text-dark mb-0 fs-6">Lead Designer</p>
+                                    <div class="d-flex gap-1">
+                                        <i class="fa-solid fa-star" style="color: var(--bs-warning);"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--bs-warning);"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--bs-warning);"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--bs-warning);"></i>
+                                        <i class="fa-regular fa-star" style="color: var(--bs-warning);"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Title -->
+                        <h6 class="fw-semibold mb-0 fs-5 text-dark">
+                            It was a very good experience
+                        </h6>
+
+                        <!-- Testimonial Text -->
+                        <p class="text-dark mb-0 fs-6 lh-base">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                <div class="card h-100 border border-1 border-opacity-10 rounded-3 shadow-sm testimonial-card" style="max-width: 400px; min-height: 430px; width: 100%;">
+                    <div class="card-body d-flex flex-column gap-3 p-4">
+
+                        <!-- Header with Avatar and Info -->
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="images/Ellipse 5.jpg" 
+                                 alt="Leo" 
+                                 class="rounded-circle object-fit-cover flex-shrink-0" 
+                                 width="72" 
+                                 height="72">
+
+                            <div class="flex-grow-1">
+                                <h5 class="fw-bold text-dark mb-2 fs-4">Leo</h5>
+                                <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-2 gap-sm-3">
+                                    <p class="text-dark mb-0 fs-6">Lead Designer</p>
+                                    <div class="d-flex gap-1">
+                                        <i class="fa-solid fa-star" style="color: var(--bs-warning);"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--bs-warning);"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--bs-warning);"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--bs-warning);"></i>
+                                        <i class="fa-regular fa-star" style="color: var(--bs-warning);"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Title -->
+                        <h6 class="fw-semibold mb-0 fs-5 text-dark">
+                            It was a very good experience
+                        </h6>
+
+                        <!-- Testimonial Text -->
+                        <p class="text-dark mb-0 fs-6 lh-base">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                <div class="card h-100 border border-1 border-opacity-10 rounded-3 shadow-sm testimonial-card" style="max-width: 400px; min-height: 430px; width: 100%;">
+                    <div class="card-body d-flex flex-column gap-3 p-4">
+
+                        <!-- Header with Avatar and Info -->
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="images/Ellipse 5.jpg" 
+                                 alt="Leo" 
+                                 class="rounded-circle object-fit-cover flex-shrink-0" 
+                                 width="72" 
+                                 height="72">
+
+                            <div class="flex-grow-1">
+                                <h5 class="fw-bold text-dark mb-2 fs-4">Leo</h5>
+                                <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-2 gap-sm-3">
+                                    <p class="text-dark mb-0 fs-6">Lead Designer</p>
+                                    <div class="d-flex gap-1">
+                                        <i class="fa-solid fa-star" style="color: var(--bs-warning);"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--bs-warning);"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--bs-warning);"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--bs-warning);"></i>
+                                        <i class="fa-regular fa-star" style="color: var(--bs-warning);"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Title -->
+                        <h6 class="fw-semibold mb-0 fs-5 text-dark">
+                            It was a very good experience
+                        </h6>
+
+                        <!-- Testimonial Text -->
+                        <p class="text-dark mb-0 fs-6 lh-base">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Our Blogs Section -->
+<section class=" pt-0 py-5 " style="background-color: var(--card-bg);">
+  <div class="container ">
+    <!-- Section Title -->
+    <h2 class="text-center fw-bold mb-4" style="font-family: 'Poppins', sans-serif; font-size: 34px; color: var(--text-primary-color);">
+      Our Blogs
+    </h2>
+
+    <!-- Blog Cards Row -->
+    <div class="row gx-4 gy-4 justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm" style="background-color: var(--card-bg); border: 1px solid var(--card-border);">
+          <img src="images/blogsimage.jpg" class="card-img-top rounded-3" alt="Blog Image 1">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title fw-medium mb-2" style="font-family: 'Poppins', sans-serif; font-size: 20px; color: var(--text-primary-color);">
+              Learning to write as a clean professional author
+            </h3>
+            <p class="card-text text-muted mb-3" style="font-family: 'Poppins', sans-serif; font-size: 14px; line-height: 1.5; color: var(--text-secondary-color);">
+              Create your account through our website or mobile app with just your phone number
+            </p>
+            <a href="#" class="text-decoration-none d-inline-flex align-items-center mt-auto" style="color: var(--link-color); font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 500;">
+              Learn More
+<i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm" style="background-color: var(--card-bg); border: 1px solid var(--card-border);">
+          <img src="images/blogsimage.jpg" class="card-img-top rounded-3" alt="Blog Image 2">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title fw-medium mb-2" style="font-family: 'Poppins', sans-serif; font-size: 20px; color: var(--text-primary-color);">
+              Learning to write as a clean professional author
+            </h3>
+            <p class="card-text text-muted mb-3" style="font-family: 'Poppins', sans-serif; font-size: 14px; line-height: 1.5; color: var(--text-secondary-color);">
+              Create your account through our website or mobile app with just your phone number
+            </p>
+            <a href="#" class="text-decoration-none d-inline-flex align-items-center mt-auto" style="color: var(--link-color); font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 500;">
+              Learn More
+             <i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm" style="background-color: var(--card-bg); border: 1px solid var(--card-border);">
+          <img src="images/blogsimage.jpg" class="card-img-top rounded-3" alt="Blog Image 3">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title fw-medium mb-2" style="font-family: 'Poppins', sans-serif; font-size: 20px; color: var(--text-primary-color);">
+              Learning to write as a clean professional author
+            </h3>
+            <p class="card-text text-muted mb-3" style="font-family: 'Poppins', sans-serif; font-size: 14px; line-height: 1.5; color: var(--text-secondary-color);">
+              Create your account through our website or mobile app with just your phone number
+            </p>
+            <a href="#" class="text-decoration-none d-inline-flex align-items-center mt-auto" style="color: var(--link-color); font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 500;">
+              Learn More
+<i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- FAQ Section -->
+ <section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+           <!-- Left Column - Title and CTA -->
+<div class="col-lg-5 col-md-12 ">
+   
+    <div class="pe-lg-4 pt-3"> 
+        <h1 class="display-5 fw-semibold mb-0">Frequently Asked</h1>
+        <h1 class="display-5 fw-semibold text-primary mb-4">Questions</h1>
+        <p class="text-secondary mb-4">Still have questions? Get connected to our support team.</p>
+        <a href="contact.html" class="btn bg-primary text-white btn-lg px-3 py-2" style="background-color: var(--bs-primary);">Contact Us</a>
+    </div>
+</div>
+
+            <!-- Right Column - Accordion -->
+            <div class="col-lg-7 col-md-12">
+                <div class="accordion" id="faqAccordion">
+                    <!-- FAQ items will be dynamically generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// FAQ Questions Data
+const faqData = [
+    {
+        id: 'faq1',
+        question: 'What is Sayogilite?',
+        answer: 'Sayogilite is a comprehensive platform designed to help you manage your projects efficiently. It offers a wide range of features including task management, team collaboration, and real-time tracking.'
+    },
+    
+    {
+        id: 'faq2',
+        question: 'How to download Sayogilite?',
+        answer: 'You can download Sayogilite from our official website or app stores. Simply visit the download section, choose your platform (Windows, Mac, iOS, or Android), and follow the installation instructions.'
+    },
+    {
+        id: 'faq3',
+        question: 'Features of Sayogilite?',
+        answer: 'Sayogilite includes features such as task scheduling, team collaboration tools, file sharing, real-time notifications, analytics dashboard, and integrations with popular third-party applications.'
+    },
+    {
+        id: 'faq4',
+        question: 'Is Sayogilite free to use?',
+        answer: 'Yes! Sayogilite offers a free plan with basic features. We also have premium plans with advanced features for teams and enterprises.'
+    },
+    {
+        id: 'faq5',
+        question: 'Is Sayogilite free to use?',
+        answer: 'Yes! Sayogilite offers a free plan with basic features. We also have premium plans with advanced features for teams and enterprises.'
+    },
+    {
+        id: 'faq6',
+        question: 'Is Sayogilite free to use?',
+        answer: 'Yes! Sayogilite offers a free plan with basic features. We also have premium plans with advanced features for teams and enterprises.'
+    }
+];
+
+// Function to populate FAQ accordion
+function populateFAQ() {
+    const accordion = document.getElementById('faqAccordion');
+    
+    if (!accordion) {
+        console.error('FAQ Accordion element not found');
+        return;
+    }
+    
+    // Clear existing content
+    accordion.innerHTML = '';
+    
+    // Generate accordion items from data
+    faqData.forEach((faq, index) => {
+        const accordionItem = document.createElement('div');
+        accordionItem.className = 'accordion-item border rounded-3 mb-3';
+        
+        accordionItem.innerHTML = `
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#${faq.id}" aria-expanded="false" aria-controls="${faq.id}">
+                    <i class="fa-regular fa-circle-question me-2" style="color: var(--bs-primary);"></i>
+                    ${faq.question}
+                </button>
+            </h2>
+            <div id="${faq.id}" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body px-4 py-3 text-muted">
+                    ${faq.answer}
+                </div>
+            </div>
+        `;
+        
+        accordion.appendChild(accordionItem);
+    });
+}
+
+// Initialize FAQ when DOM is ready
+document.addEventListener('DOMContentLoaded', populateFAQ);
+</script>
+
+<!-- Download SayogiLite Today Section -->
+<section class="py-5" style="background-color: var(--bg-download);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10 text-center">
+        <!-- Heading -->
+        <h2 class="fw-bold text-white mb-3" style="font-size: 50px; line-height: 1.2; letter-spacing: 3%; font-family: 'Poppins', sans-serif;">
+          Download SayogiLite Today
+        </h2>
+
+        <!-- Sub-text -->
+        <p class="text-white mb-4" style="font-size: 18px; line-height: 1.4; font-family: 'Poppins', sans-serif;">
+          Start managing your construction projects smarter. Download SayogiLite for free and experience the future of construction management.
+        </p>
+
+        <!-- App Store Buttons -->
+        <div class="d-flex justify-content-center gap-3 mb-4">
+          <a href="#" class="text-decoration-none">
+            <img src="images/Store Google download button.jpg" alt="Get it on Google Play" style="height: 45px;" />
+          </a>
+          <a href="#" class="text-decoration-none">
+            <img src="images/Store Apple download button .jpg" alt="Download on the App Store" style="height: 45px;" />
+          </a>
+        </div>
+
+        <!-- Horizontal Divider -->
+<hr class="my-4" style="border-top: 1px solid #CCCCCC; max-width: 100%;" />
+        <!-- Stats -->
+        <div class="d-flex justify-content-center gap-4 mt-4">
+          <!-- Downloads Stat -->
+          <div class="text-center">
+            <h3 class="fw-semibold text-white mb-1" style="font-size: 30px; line-height: 1;">100K+</h3>
+            <p class="text-white mb-0" style="font-size: 13px; line-height: 1; letter-spacing: 3%;">Downloads</p>
+          </div>
+
+          <!-- App Rating Stat -->
+          <div class="text-center">
+<h3 class="fw-semibold text-white mb-1" style="font-size: 30px; line-height: 1;">
+  <span class="d-inline-flex align-items-center gap-1">
+    4.8
+    <i class="bi bi-star-fill" style="font-size: 20px;" aria-hidden="true"></i>
+  </span>
+</h3>
+           <p class="text-white mb-0" style="font-size: 13px; line-height: 1; letter-spacing: 3%;">App Rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Footer Section -->
+<footer class="text-white py-5" style="background-color: var(--bg-sayogi-dark);">
+    <div class="container">
+        <div class="row g-0"> <!-- g-0 for no default gap -->
+            <!-- Logo and Social Icons Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="d-flex flex-column h-100">
+                    <div class="mb-0">
+  <img src="images/footer logo.png" alt="Project Sayogi Lite Logo" class="img-fluid" style="max-width: 134px; height:113px; gap: 8px;">
+                    </div>
+                    <div class="d-flex  " style="gap: 12px;">
+                        <a href="#" class="social-icon">
+<i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" class="social-icon">
+<i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                        <a href="#" class="social-icon">
+<i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" class="social-icon">
+<i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Link Column -->
+            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 ms-lg-5"> 
+                <h5 class="fw-semibold mb-3 pb-2 border-bottom border-white border-2" style="width: fit-content;">Quick Link</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="home.html" class="text-white text-decoration-none">Home</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="aboutus.html" class="text-white text-decoration-none">About Us</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="pricing.html" class="text-white text-decoration-none">Pricing</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="contact.html" class="text-white text-decoration-none">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Us Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 ms-lg-5"> <!-- ms-lg-5 adds left margin -->
+                <h5 class="fw-semibold mb-3 pb-2 border-bottom border-white border-2" style="width: fit-content;">Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-3 d-flex align-items-start">
+                       <i class="fa-solid fa-location-dot me-2 mt-1"></i>
+                        <span>Sundarmarga-9, Pokhara</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+<i class="fa-regular fa-envelope me-2"></i>
+                        <a href="mailto:info@projectsayogilite.com.np" class="text-white text-decoration-none">info@projectsayogilite.com.np</a>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+<i class="fa-solid fa-phone me-2"></i>
+                        <a href="tel:+9779802855356" class="text-white text-decoration-none">+9779802855356</a>
+                    </li>
+                </ul>
+            </div>
+
+<!-- Download App Column -->
+<div class="col-lg-2 col-md-6 mb-4 mb-lg-0 ms-lg-5">
+    <h5 class="fw-semibold mb-3 pb-2 border-bottom border-white border-2" style="width: fit-content;">Download App</h5>
+    <div class="d-flex flex-column gap-3">
+        <!-- Google Play Badge -->
+        <a href="#" class="text-decoration-none">
+            <img 
+                src="images/google footer download button .jpg"
+                alt="Get it on Google Play"
+                width="151"
+                height="40"
+                class="rounded-2 border border-secondary"
+            >
+        </a>
+
+        <!-- App Store Badge -->
+        <a href="#" class="text-decoration-none">
+            <img 
+                src="images/Apple footer Store download button .jpg"
+                alt="Download on the App Store"
+                width="151"
+                height="40"
+                class="rounded-2 border border-secondary"
+            >
+        </a>
+    </div>
+</div>
+        </div>
+
+        <!-- Copyright Section -->
+      <div class="row mt-5 pt-4 border-top border-secondary">
+  <div class="col-12 text-center">
+    <p class="mb-0 text-white-50">
+      <i class="far fa-copyright"></i> 2025. ProjectSayogi Lite. All Rights Reserved. | 
+      Powered by <a href="https://tukisoft.com.np/" class="text-white-50 text-decoration-none" target="_blank" rel="noopener">Tuki Soft</a>
+    </p>
+  </div>
+</div>
+    </div>
+</footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

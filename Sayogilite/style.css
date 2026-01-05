@@ -1,0 +1,342 @@
+
+      :root {
+        --bs-primary: #1AB189;
+        --bs-primary-rgb: 26, 177, 137;
+        --bs-secondary: #555555;
+        --bs-secondary-rgb: 85, 85, 85;
+        --bs-dark: #000000;
+        --bs-dark-rgb: 0, 0, 0;
+        --bs-warning: #FF980E;
+        --bs-warning-rgb: 255, 152, 14;
+        --bs-info: #186B97;
+        --bs-info-rgb: 24, 107, 151;
+        --primary-dark: #128B6B;
+        --primary-light: #ADEBDB;
+        --bg-light-cyan: #D5F2F0;
+        --text-dark: #222222;
+          --primary-hover: #128B6B;
+  --bg-sayogi-dark: #102D41;       
+  --bg-icon-light: #D8E8F5;        
+  --card-bg: rgba(83, 35, 226, 0.1);
+ --card-bg-dark-blue: #102D41;
+  --card-bg-dark-blue-soft: rgba(60, 78, 90, 0.85);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --bs-info-bg-subtle: rgba(26, 177, 137, 0.12);
+  --text-primary-color: #1A1A1A;
+  --text-secondary-color: #555555;
+  --link-color: #0A0C5C;
+  --card-bg: #FAFAFA;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-bg-dark-blue-soft: rgba(60, 78, 90, 0.85);
+  --bg-sayogi-dark: #102D41;
+  --bg-download:#168D6D;
+
+      }
+.bg-bg-sayogi-dark {
+  background-color: var(--bg-sayogi-dark);
+}
+      .bg-primary-dark {
+  background-color: var(--bg-primary-dark);
+}
+      .bg-light-cyan {
+        background-color: var(--bg-light-cyan);
+      }
+
+      .text-dark-custom {
+        color: var(--text-dark);
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .navbar {
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+
+      .brand-logo-img {
+        width: 86px;
+        height: 65px;
+      }
+
+      .nav-link {
+        font-family: 'Poppins', sans-serif;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--bs-primary) !important;
+      }
+
+      .nav-link.active {
+        color: var(--bs-primary) !important;
+      }
+
+      .active-nav {
+        font-weight: 600 !important;
+      }
+
+      .navbar-toggler .fa-xmark {
+  font-size: 2rem;
+  color: #9aaaa7; 
+}
+      .btn-get-started {
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
+        width: fit-content;
+        height: 40px;
+  padding: 10px 20px;
+          font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: -0.09px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        gap: 8px;
+      }
+
+      .btn-get-started:hover {
+        background-color: #179372;
+        border-color: #179372;
+        color: white;
+        transform: translateY(-1px);
+      }
+
+      .btn-get-started i {
+        margin-left: 6px;
+        font-size: 0.9rem;
+      }
+
+      .navbar-toggler {
+        padding: 6px 8px;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      .bg-info-subtle {
+        background-color: rgba(var(--bs-info-rgb), 0.15) !important;
+      }
+
+      .bg-warning-subtle {
+        background-color: rgba(var(--bs-warning-rgb), 0.2) !important;
+      }
+
+      .bg-primary-subtle {
+        background-color: rgba(var(--bs-primary-rgb), 0.5) !important;
+      }
+
+      .circle-indicator {
+        width: 24px;
+        height: 24px;
+        background-color: var(--bs-primary);
+      }
+
+      .circle-indicator-inner {
+        width: 10px;
+        height: 10px;
+        background-color: white;
+      }
+
+      .stat-value {
+        color: var(--bs-primary);
+        font-size: 18px;
+      }
+
+      .avatar-circle-dark {
+        width: 35px;
+        height: 35px;
+        background-color: var(--primary-dark);
+      }
+
+      .avatar-circle-primary {
+        width: 35px;
+        height: 35px;
+        background-color: var(--bs-primary);
+        margin-left: -12px;
+      }
+
+      .avatar-circle-light {
+        width: 35px;
+        height: 35px;
+        background-color: var(--primary-light);
+        margin-left: -12px;
+      }
+
+      .avatar-circle-light span {
+        color: var(--primary-dark);
+        font-size: 18px;
+      }
+
+      .feature-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+      }
+
+      @media (max-width: 991.98px) {
+        .navbar-collapse {
+          margin-top: 15px;
+        }
+        
+        .btn-get-started {
+          margin-top: 15px;
+          width: fit-content;
+          height: auto;
+        }
+      }
+
+      .card {
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .social-icon {
+        width: 36px;
+        height: 36px;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .social-icon:hover {
+        background-color: #ffffff;
+        color: var(--bs-info);
+        border-color: #ffffff;
+      }
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.btn.bg-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  transition: all 0.3s ease;
+}
+
+.btn.bg-primary:hover {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 177, 137, 0.3);
+}
+
+.btn.border-primary {
+  transition: all 0.3s ease;
+}
+
+.btn.border-primary:hover {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 177, 137, 0.3);
+}
+.pricing-card-pro {
+      background: var(--bs-info) !important;
+      color: white !important;
+    }
+
+    .pricing-card-pro .text-muted {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    .badge-popular {
+      background-color: #16a085;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .pricing-features li {
+      font-size: 0.9rem;
+    }
+
+    .feature-disabled {
+      color: #d1d5db;
+    }
+
+/* Pricing section buttons hover effects - ONLY for Basic and Enterprise cards */
+.card-body .btn-outline-primary {
+  color: var(--bs-primary) !important;
+        border-color: var(--bs-primary);
+  transition: all 0.3s ease;
+}
+
+.card-body .btn-outline-primary:hover {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 177, 137, 0.3);
+}
+
+.fa-8px { font-size: 8px !important; }
+
+  /* Ensure hero image stays at top */
+  .about-hero-section img {
+    object-fit: contain !important;
+    object-position: top !important;
+  }
+
+  /* Desktop: keep your original look */
+  @media (min-width: 992px) {
+    .about-hero-section {
+      height: auto !important;
+      min-height: 683px;
+    }
+    .about-cyan-container {
+      margin-top: -110px !important;
+    }
+  }
+
+  /* Tablet: reduce negative margin so it doesn't jump too high */
+  @media (max-width: 991.98px) and (min-width: 768px) {
+    .about-cyan-container {
+      margin-top: -70px !important;
+    }
+  }
+
+  /* Mobile: reduce more, and ensure side gaps */
+  @media (max-width: 767.98px) {
+    .about-cyan-container {
+      margin-top: -50px !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+    .about-hero-section {
+      height: auto !important;
+      min-height: 280px;
+      margin-top: 20px;
+    }
+  }
